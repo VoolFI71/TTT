@@ -6946,3 +6946,583 @@ task: <Task pending name='Task-8' coro=<Event.wait() running at C:\Users\admin\A
 2025-09-21 17:44:52,322 - aiogram.event - INFO - Update id=208433750 is handled. Duration 125 ms by bot id=8495748481
 2025-09-21 17:45:05,409 - aiogram.event - INFO - Update id=208433751 is handled. Duration 172 ms by bot id=8495748481
 2025-09-21 17:45:08,555 - aiogram.event - INFO - Update id=208433752 is handled. Duration 328 ms by bot id=8495748481
+2025-09-22 15:14:23,083 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:14:23,316 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:14:23,407 - aiogram.event - INFO - Update id=224568943 is not handled. Duration 16 ms by bot id=8238763231
+2025-09-22 15:14:23,408 - aiogram.event - ERROR - Cause exception while process update id=224568943 by bot id=8238763231
+AttributeError: 'bool' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\admin_panel.py", line 1448, in handle_broadcast_message
+    if not state.startswith("waiting_broadcast_"):
+AttributeError: 'bool' object has no attribute 'startswith'
+2025-09-22 15:14:23,578 - aiogram.event - INFO - Update id=224568954 is not handled. Duration 187 ms by bot id=8238763231
+2025-09-22 15:14:23,663 - aiogram.event - INFO - Update id=224568947 is handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:14:23,663 - aiogram.event - INFO - Update id=224568958 is not handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:14:23,663 - aiogram.event - ERROR - Cause exception while process update id=224568958 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 370, in profile
+    await message.answer(text, reply_markup=reply_markup)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,664 - aiogram.event - INFO - Update id=224568959 is not handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:14:23,664 - aiogram.event - ERROR - Cause exception while process update id=224568959 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 398, in info
+    await message.answer(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,666 - aiogram.event - INFO - Update id=224568952 is not handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:14:23,666 - aiogram.event - ERROR - Cause exception while process update id=224568952 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 370, in profile
+    await message.answer(text, reply_markup=reply_markup)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,667 - aiogram.event - INFO - Update id=224568945 is handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:14:23,679 - aiogram.event - INFO - Update id=224568944 is handled. Duration 282 ms by bot id=8238763231
+2025-09-22 15:14:23,704 - aiogram.event - INFO - Update id=224568949 is handled. Duration 312 ms by bot id=8238763231
+2025-09-22 15:14:23,719 - aiogram.event - INFO - Update id=224568951 is not handled. Duration 328 ms by bot id=8238763231
+2025-09-22 15:14:23,720 - aiogram.event - ERROR - Cause exception while process update id=224568951 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 398, in info
+    await message.answer(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,724 - aiogram.event - INFO - Update id=224568948 is handled. Duration 328 ms by bot id=8238763231
+2025-09-22 15:14:23,746 - aiogram.event - INFO - Update id=224568955 is handled. Duration 344 ms by bot id=8238763231
+2025-09-22 15:14:23,758 - aiogram.event - INFO - Update id=224568950 is not handled. Duration 360 ms by bot id=8238763231
+2025-09-22 15:14:23,759 - aiogram.event - ERROR - Cause exception while process update id=224568950 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 370, in profile
+    await message.answer(text, reply_markup=reply_markup)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,791 - aiogram.event - INFO - Update id=224568960 is not handled. Duration 375 ms by bot id=8238763231
+2025-09-22 15:14:23,791 - aiogram.event - ERROR - Cause exception while process update id=224568960 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 182, in connect_vpn
+    await send_vpn_message(message, user_id)
+  File "C:\shard vpn\bot.py", line 169, in send_vpn_message
+    await message_or_callback.answer(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:23,802 - aiogram.event - INFO - Update id=224568953 is not handled. Duration 407 ms by bot id=8238763231
+2025-09-22 15:14:23,802 - aiogram.event - ERROR - Cause exception while process update id=224568953 by bot id=8238763231
+TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 182, in connect_vpn
+    await send_vpn_message(message, user_id)
+  File "C:\shard vpn\bot.py", line 169, in send_vpn_message
+    await message_or_callback.answer(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 128, in check_response
+    raise TelegramForbiddenError(method=method, message=description)
+aiogram.exceptions.TelegramForbiddenError: Telegram server says - Forbidden: bot was blocked by the user
+2025-09-22 15:14:46,087 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-22 15:14:46,095 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-22 15:14:46,196 - aiogram.event - INFO - Update id=224568961 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:14:47,487 - aiogram.event - INFO - Update id=224568962 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:14:49,360 - aiogram.event - INFO - Update id=224568963 is handled. Duration 187 ms by bot id=8238763231
+2025-09-22 15:14:53,963 - aiogram.event - INFO - Update id=224568964 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:14:54,984 - aiogram.event - INFO - Update id=224568965 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:14:55,941 - aiogram.event - INFO - Update id=224568966 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:15:15,590 - aiogram.event - INFO - Update id=224568967 is handled. Duration 62 ms by bot id=8238763231
+2025-09-22 15:15:16,654 - aiogram.event - INFO - Update id=224568968 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:15:19,757 - aiogram.event - INFO - Update id=224568969 is handled. Duration 968 ms by bot id=8238763231
+2025-09-22 15:15:21,258 - aiogram.event - INFO - Update id=224568970 is handled. Duration 235 ms by bot id=8238763231
+2025-09-22 15:16:00,352 - aiogram.event - INFO - Update id=224568971 is handled. Duration 156 ms by bot id=8238763231
+2025-09-22 15:16:28,019 - aiogram.event - INFO - Update id=224568972 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:16:29,218 - aiogram.event - INFO - Update id=224568973 is handled. Duration 156 ms by bot id=8238763231
+2025-09-22 15:16:30,977 - aiogram.event - INFO - Update id=224568974 is handled. Duration 937 ms by bot id=8238763231
+2025-09-22 15:16:32,363 - aiogram.event - INFO - Update id=224568975 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:17:05,744 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:17:05,908 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:17:10,470 - aiogram.event - INFO - Update id=224568976 is handled. Duration 203 ms by bot id=8238763231
+2025-09-22 15:17:11,680 - aiogram.event - INFO - Update id=224568977 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:17:13,337 - aiogram.event - INFO - Update id=224568978 is handled. Duration 812 ms by bot id=8238763231
+2025-09-22 15:17:14,888 - aiogram.event - INFO - Update id=224568979 is handled. Duration 250 ms by bot id=8238763231
+2025-09-22 15:17:16,649 - aiogram.event - INFO - Update id=224568980 is handled. Duration 62 ms by bot id=8238763231
+2025-09-22 15:17:16,749 - root - INFO - Пользователь 8132904958 добавлен в bot_users при оплате
+2025-09-22 15:17:17,032 - root - INFO - Подписка успешно добавлена для пользователя 8132904958 на 0 мес. До 29.09.2025 15:17
+2025-09-22 15:17:17,125 - aiogram.event - INFO - Update id=224568981 is handled. Duration 390 ms by bot id=8238763231
+2025-09-22 15:17:22,681 - aiogram.event - INFO - Update id=224568982 is handled. Duration 407 ms by bot id=8238763231
+2025-09-22 15:17:25,314 - aiogram.event - INFO - Update id=224568983 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:17:26,687 - aiogram.event - INFO - Update id=224568984 is handled. Duration 375 ms by bot id=8238763231
+2025-09-22 15:21:15,632 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:21:15,827 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:21:21,698 - aiogram.event - INFO - Update id=224568985 is handled. Duration 187 ms by bot id=8238763231
+2025-09-22 15:21:25,212 - aiogram.event - INFO - Update id=224568986 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:21:28,019 - aiogram.event - INFO - Update id=224568987 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:21:34,810 - aiogram.event - INFO - Update id=224568988 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:21:36,265 - aiogram.event - INFO - Update id=224568989 is handled. Duration 390 ms by bot id=8238763231
+2025-09-22 15:21:37,531 - aiogram.event - INFO - Update id=224568990 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:21:39,866 - aiogram.event - INFO - Update id=224568991 is handled. Duration 890 ms by bot id=8238763231
+2025-09-22 15:22:00,741 - root - INFO - Подписка успешно добавлена для пользователя 8132904958 на 1 мес. До 29.10.2025 15:17
+2025-09-22 15:22:08,042 - aiogram.event - INFO - Update id=224568992 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:22:09,476 - aiogram.event - INFO - Update id=224568993 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:22:10,555 - aiogram.event - INFO - Update id=224568994 is handled. Duration 266 ms by bot id=8238763231
+2025-09-22 15:22:31,286 - aiogram.event - INFO - Update id=224568995 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:22:35,720 - aiogram.event - INFO - Update id=224568996 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:22:37,126 - aiogram.event - INFO - Update id=224568997 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:22:44,655 - aiogram.event - INFO - Update id=224568998 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:22:46,188 - aiogram.event - INFO - Update id=224568999 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:23:15,319 - aiogram.event - INFO - Update id=224569000 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:23:16,855 - aiogram.event - INFO - Update id=224569001 is handled. Duration 202 ms by bot id=8238763231
+2025-09-22 15:24:37,050 - aiogram.event - INFO - Update id=224569002 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:26:09,176 - aiogram.event - INFO - Update id=224569003 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:26:10,608 - aiogram.event - INFO - Update id=224569004 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:26:11,672 - aiogram.event - INFO - Update id=224569005 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:26:12,770 - aiogram.event - INFO - Update id=224569006 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:26:14,334 - aiogram.event - INFO - Update id=224569007 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:26:33,764 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:26:33,969 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:26:57,521 - aiogram.event - INFO - Update id=224569008 is handled. Duration 281 ms by bot id=8238763231
+2025-09-22 15:26:58,569 - aiogram.event - INFO - Update id=224569009 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:27:06,479 - aiogram.event - INFO - Update id=224569010 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:27:09,915 - aiogram.event - INFO - Update id=224569011 is handled. Duration 297 ms by bot id=8238763231
+2025-09-22 15:27:14,683 - aiogram.event - INFO - Update id=224569012 is handled. Duration 766 ms by bot id=8238763231
+2025-09-22 15:27:16,097 - aiogram.event - INFO - Update id=224569013 is handled. Duration 327 ms by bot id=8238763231
+2025-09-22 15:27:17,902 - aiogram.event - INFO - Update id=224569014 is handled. Duration 47 ms by bot id=8238763231
+2025-09-22 15:27:17,974 - root - INFO - Пользователь 8272216832 добавлен в bot_users при оплате
+2025-09-22 15:27:18,234 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 29.09.2025 15:27
+2025-09-22 15:27:18,322 - aiogram.event - INFO - Update id=224569015 is handled. Duration 359 ms by bot id=8238763231
+2025-09-22 15:27:33,620 - aiogram.event - INFO - Update id=224569016 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:27:40,811 - aiogram.event - INFO - Update id=224569017 is handled. Duration 219 ms by bot id=8238763231
+2025-09-22 15:27:55,181 - aiogram.event - INFO - Update id=224569018 is handled. Duration 203 ms by bot id=8238763231
+2025-09-22 15:27:56,298 - aiogram.event - INFO - Update id=224569019 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:28:01,705 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-22 15:28:01,713 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-22 15:28:01,865 - aiogram.event - INFO - Update id=224569020 is handled. Duration 171 ms by bot id=8238763231
+2025-09-22 15:28:03,410 - aiogram.event - INFO - Update id=224569021 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:28:04,682 - aiogram.event - INFO - Update id=224569022 is handled. Duration 313 ms by bot id=8238763231
+2025-09-22 15:28:07,438 - aiogram.event - INFO - Update id=224569023 is handled. Duration 2000 ms by bot id=8238763231
+2025-09-22 15:28:11,986 - aiogram.event - INFO - Update id=224569024 is handled. Duration 218 ms by bot id=8238763231
+2025-09-22 15:28:21,383 - aiogram.event - INFO - Update id=224569025 is handled. Duration 202 ms by bot id=8238763231
+2025-09-22 15:28:30,072 - aiogram.event - INFO - Update id=224569026 is handled. Duration 234 ms by bot id=8238763231
+2025-09-22 15:28:31,206 - aiogram.event - INFO - Update id=224569027 is handled. Duration 140 ms by bot id=8238763231
+2025-09-22 15:28:33,427 - aiogram.event - INFO - Update id=224569028 is handled. Duration 797 ms by bot id=8238763231
+2025-09-22 15:28:43,920 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 1 мес. До 29.10.2025 15:27
+2025-09-22 15:28:54,297 - aiogram.event - INFO - Update id=224569029 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:29:04,298 - aiogram.event - INFO - Update id=224569030 is handled. Duration 234 ms by bot id=8238763231
+2025-09-22 15:29:04,388 - aiogram.event - INFO - Update id=224569033 is not handled. Duration 281 ms by bot id=8238763231
+2025-09-22 15:29:04,389 - aiogram.event - ERROR - Cause exception while process update id=224569033 by bot id=8238763231
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\admin_panel.py", line 548, in admin_stats_callback
+    await callback.message.edit_text(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-09-22 15:29:04,512 - aiogram.event - INFO - Update id=224569032 is handled. Duration 391 ms by bot id=8238763231
+2025-09-22 15:29:04,512 - root - ERROR - Ошибка получения статистики платежей: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-09-22 15:29:04,638 - aiogram.event - INFO - Update id=224569031 is handled. Duration 531 ms by bot id=8238763231
+2025-09-22 15:29:05,637 - aiogram.event - INFO - Update id=224569034 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:29:06,631 - aiogram.event - INFO - Update id=224569035 is handled. Duration 156 ms by bot id=8238763231
+2025-09-22 15:29:12,416 - aiogram.event - INFO - Update id=224569036 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:29:13,640 - aiogram.event - INFO - Update id=224569037 is handled. Duration 156 ms by bot id=8238763231
+2025-09-22 15:29:14,807 - aiogram.event - INFO - Update id=224569038 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:29:24,013 - aiogram.event - INFO - Update id=224569039 is handled. Duration 312 ms by bot id=8238763231
+2025-09-22 15:29:25,255 - aiogram.event - INFO - Update id=224569040 is handled. Duration 156 ms by bot id=8238763231
+2025-09-22 15:29:27,888 - aiogram.event - INFO - Update id=224569041 is handled. Duration 875 ms by bot id=8238763231
+2025-09-22 15:29:32,857 - aiogram.event - INFO - Update id=224569042 is handled. Duration 312 ms by bot id=8238763231
+2025-09-22 15:29:48,745 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 3 мес. До 29.01.2026 15:27
+2025-09-22 15:29:54,649 - aiogram.event - INFO - Update id=224569043 is handled. Duration 343 ms by bot id=8238763231
+2025-09-22 15:29:55,842 - aiogram.event - INFO - Update id=224569044 is handled. Duration 171 ms by bot id=8238763231
+2025-09-22 15:29:58,368 - aiogram.event - INFO - Update id=224569045 is handled. Duration 765 ms by bot id=8238763231
+2025-09-22 15:30:08,869 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 6 мес. До 29.07.2026 15:27
+2025-09-22 15:30:12,288 - aiogram.event - INFO - Update id=224569046 is handled. Duration 358 ms by bot id=8238763231
+2025-09-22 15:30:13,850 - aiogram.event - INFO - Update id=224569047 is handled. Duration 265 ms by bot id=8238763231
+2025-09-22 15:30:16,236 - aiogram.event - INFO - Update id=224569048 is handled. Duration 983 ms by bot id=8238763231
+2025-09-22 15:30:26,781 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 12 мес. До 29.07.2027 15:27
+2025-09-22 15:30:32,357 - aiogram.event - INFO - Update id=224569049 is handled. Duration 265 ms by bot id=8238763231
+2025-09-22 15:30:33,380 - aiogram.event - INFO - Update id=224569050 is handled. Duration 141 ms by bot id=8238763231
+2025-09-22 15:30:34,755 - aiogram.event - INFO - Update id=224569051 is handled. Duration 312 ms by bot id=8238763231
+2025-09-22 15:31:04,503 - aiogram.event - INFO - Update id=224569052 is handled. Duration 250 ms by bot id=8238763231
+2025-09-22 15:31:13,850 - aiogram.event - INFO - Update id=224569053 is handled. Duration 780 ms by bot id=8238763231
+2025-09-22 15:31:24,369 - root - INFO - Подписка успешно добавлена для пользователя 8132904958 на 0 мес. До 29.09.2025 15:31
+2025-09-22 15:31:32,289 - aiogram.event - INFO - Update id=224569054 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:31:33,369 - aiogram.event - INFO - Update id=224569055 is handled. Duration 280 ms by bot id=8238763231
+2025-09-22 15:31:33,952 - aiogram.event - INFO - Update id=224569056 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:37:21,621 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:37:21,803 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:37:30,728 - aiogram.event - INFO - Update id=224569057 is handled. Duration 250 ms by bot id=8238763231
+2025-09-22 15:37:35,622 - aiogram.event - INFO - Update id=224569058 is handled. Duration 202 ms by bot id=8238763231
+2025-09-22 15:37:38,779 - aiogram.event - INFO - Update id=224569059 is handled. Duration 93 ms by bot id=8238763231
+2025-09-22 15:37:39,680 - aiogram.event - INFO - Update id=224569060 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:37:41,282 - aiogram.event - INFO - Update id=224569061 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:37:42,562 - aiogram.event - INFO - Update id=224569062 is handled. Duration 78 ms by bot id=8238763231
+2025-09-22 15:37:43,544 - aiogram.event - INFO - Update id=224569063 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:37:47,321 - aiogram.event - INFO - Update id=224569064 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:37:49,133 - aiogram.event - INFO - Update id=224569065 is handled. Duration 109 ms by bot id=8238763231
+2025-09-22 15:37:49,873 - aiogram.event - INFO - Update id=224569066 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:37:51,714 - aiogram.event - INFO - Update id=224569067 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:37:52,816 - aiogram.event - INFO - Update id=224569068 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:37:54,584 - aiogram.event - INFO - Update id=224569069 is handled. Duration 155 ms by bot id=8238763231
+2025-09-22 15:37:55,545 - aiogram.event - INFO - Update id=224569070 is handled. Duration 141 ms by bot id=8238763231
+2025-09-22 15:37:57,169 - aiogram.event - INFO - Update id=224569071 is handled. Duration 202 ms by bot id=8238763231
+2025-09-22 15:37:58,382 - aiogram.event - INFO - Update id=224569072 is handled. Duration 110 ms by bot id=8238763231
+2025-09-22 15:38:00,635 - aiogram.event - INFO - Update id=224569073 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:38:02,031 - aiogram.event - INFO - Update id=224569074 is handled. Duration 219 ms by bot id=8238763231
+2025-09-22 15:38:05,705 - aiogram.event - INFO - Update id=224569075 is handled. Duration 172 ms by bot id=8238763231
+2025-09-22 15:38:06,572 - aiogram.event - INFO - Update id=224569076 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:38:07,830 - aiogram.event - INFO - Update id=224569077 is handled. Duration 141 ms by bot id=8238763231
+2025-09-22 15:38:09,075 - aiogram.event - INFO - Update id=224569078 is handled. Duration 264 ms by bot id=8238763231
+2025-09-22 15:38:10,059 - aiogram.event - INFO - Update id=224569079 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:38:11,078 - aiogram.event - INFO - Update id=224569080 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:38:13,032 - aiogram.event - INFO - Update id=224569081 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:38:14,841 - aiogram.event - INFO - Update id=224569082 is handled. Duration 170 ms by bot id=8238763231
+2025-09-22 15:38:16,275 - aiogram.event - INFO - Update id=224569083 is handled. Duration 217 ms by bot id=8238763231
+2025-09-22 15:38:20,688 - aiogram.event - INFO - Update id=224569084 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:38:21,950 - aiogram.event - INFO - Update id=224569085 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:38:23,007 - aiogram.event - INFO - Update id=224569086 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:38:24,559 - aiogram.event - INFO - Update id=224569087 is handled. Duration 157 ms by bot id=8238763231
+2025-09-22 15:38:27,516 - aiogram.event - INFO - Update id=224569088 is handled. Duration 92 ms by bot id=8238763231
+2025-09-22 15:38:29,219 - aiogram.event - INFO - Update id=224569089 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:38:32,290 - aiogram.event - INFO - Update id=224569090 is handled. Duration 188 ms by bot id=8238763231
+2025-09-22 15:38:39,474 - root - INFO - Подписка пользователя 8132904958 продлена на 1 месяцев. Новое окончание: 29.10.2025 15:31
+2025-09-22 15:38:39,537 - aiogram.event - INFO - Update id=224569091 is handled. Duration 313 ms by bot id=8238763231
+2025-09-22 15:38:45,642 - aiogram.event - INFO - Update id=224569092 is handled. Duration 92 ms by bot id=8238763231
+2025-09-22 15:39:38,182 - aiogram.event - INFO - Update id=224569093 is handled. Duration 110 ms by bot id=8238763231
+2025-09-22 15:39:39,595 - aiogram.event - INFO - Update id=224569094 is handled. Duration 327 ms by bot id=8238763231
+2025-09-22 15:40:07,085 - root - INFO - Подписка пользователя 8132904958 продлена на 1 месяцев. Новое окончание: 29.11.2025 15:31
+2025-09-22 15:40:07,228 - aiogram.event - INFO - Update id=224569095 is handled. Duration 405 ms by bot id=8238763231
+2025-09-22 15:41:29,939 - aiogram.dispatcher - INFO - Start polling
+2025-09-22 15:41:30,155 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-22 15:41:31,980 - aiogram.event - INFO - Update id=224569096 is handled. Duration 186 ms by bot id=8238763231
+2025-09-22 15:41:34,090 - aiogram.event - INFO - Update id=224569097 is handled. Duration 63 ms by bot id=8238763231
+2025-09-22 15:41:39,347 - aiogram.event - INFO - Update id=224569098 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:41:43,711 - root - INFO - Подписка пользователя 8132904958 продлена на 7 дней. Новое окончание: 06.12.2025 15:31
+2025-09-22 15:41:43,826 - aiogram.event - INFO - Update id=224569099 is handled. Duration 405 ms by bot id=8238763231
+2025-09-22 15:41:46,793 - aiogram.event - INFO - Update id=224569100 is handled. Duration 219 ms by bot id=8238763231
+2025-09-22 15:41:52,851 - aiogram.event - INFO - Update id=224569101 is handled. Duration 0 ms by bot id=8238763231
+2025-09-22 15:41:54,882 - aiogram.event - INFO - Update id=224569102 is handled. Duration 157 ms by bot id=8238763231
+2025-09-22 15:41:57,641 - aiogram.event - INFO - Update id=224569103 is handled. Duration 92 ms by bot id=8238763231
+2025-09-22 15:42:04,193 - root - INFO - Подписка пользователя 8132904958 продлена на 30 дней. Новое окончание: 05.01.2026 15:31
+2025-09-22 15:42:04,251 - aiogram.event - INFO - Update id=224569104 is handled. Duration 344 ms by bot id=8238763231
+2025-09-22 15:42:06,026 - aiogram.event - INFO - Update id=224569105 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:07,733 - aiogram.event - INFO - Update id=224569106 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:09,854 - aiogram.event - INFO - Update id=224569107 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:42:19,227 - aiogram.event - INFO - Update id=224569108 is handled. Duration 61 ms by bot id=8238763231
+2025-09-22 15:42:22,192 - aiogram.event - INFO - Update id=224569109 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:23,528 - aiogram.event - INFO - Update id=224569110 is handled. Duration 92 ms by bot id=8238763231
+2025-09-22 15:42:27,444 - aiogram.event - INFO - Update id=224569111 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:28,590 - aiogram.event - INFO - Update id=224569112 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:42:29,861 - aiogram.event - INFO - Update id=224569113 is handled. Duration 94 ms by bot id=8238763231
+2025-09-22 15:42:32,604 - aiogram.event - INFO - Update id=224569114 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:36,022 - aiogram.event - INFO - Update id=224569115 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:36,996 - aiogram.event - INFO - Update id=224569116 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:40,055 - aiogram.event - INFO - Update id=224569117 is handled. Duration 125 ms by bot id=8238763231
+2025-09-22 15:42:41,770 - aiogram.event - INFO - Update id=224569118 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:42,860 - aiogram.event - INFO - Update id=224569119 is handled. Duration 108 ms by bot id=8238763231
+2025-09-22 15:42:44,244 - aiogram.event - INFO - Update id=224569120 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:45,466 - aiogram.event - INFO - Update id=224569121 is handled. Duration 77 ms by bot id=8238763231
+2025-09-22 15:42:47,094 - aiogram.event - INFO - Update id=224569122 is handled. Duration 108 ms by bot id=8238763231

@@ -34,12 +34,12 @@ register_admin_handlers(dp)
 def get_price_for_period(period: str) -> int:
     """Возвращает цену для указанного периода"""
     if period == 'special':
-        return 10
+        return 1
     return PRICES.get(period, PRICES['1']) // 100
 
 # Стоимость подписки в звёздах (1 звезда ≈ 1₽)
 STARS_PRICES = {
-    'special': 10,  # ~10₽
+    'special': 1,  # ~1₽
     '1': 99,   # 99₽ за месяц
     '3': 279,  # 279₽ за 3 месяца
     '6': 549,  # 549₽ за 6 месяцев
@@ -654,12 +654,18 @@ async def pay_stars_callback(callback: types.CallbackQuery):
     """Отправляет пользователю счёт на оплату в Telegram Stars"""
     period = callback.data.split('_')[2]
     stars_price = get_stars_price(period)
-    prices = [LabeledPrice(label=f"{period} мес.", amount=stars_price)]
+    # Корректно отображаем период для специальной подписки
+    if period == 'special':
+        prices = [LabeledPrice(label="7 дней", amount=stars_price)]
+        description = "7 дней подписки"
+    else:
+        prices = [LabeledPrice(label=f"{period} мес.", amount=stars_price)]
+        description = f"{period} мес. подписки"
 
     await bot.send_invoice(
         chat_id=callback.from_user.id,
         title="Shard VPN подписка",
-        description=f"{period} мес. подписки",
+        description=description,
         payload=f"stars_sub_{period}_{callback.from_user.id}",
         provider_token=STARS_PROVIDER_TOKEN,
         currency="XTR",
@@ -679,16 +685,20 @@ async def successful_payment_handler(message: Message):
     if payload.startswith('stars_sub_'):
         try:
             _, _, period_str, user_id_str = payload.split('_')
-            period = int(period_str)
             user_id = int(user_id_str)
+            if period_str == 'special':
+                period_months = 0
+            else:
+                period_months = int(period_str)
         except ValueError:
-            period = 1
             user_id = message.from_user.id
+            period_months = 1
 
         # Определяем, была ли подписка активной до продления
         was_active = await check_user_payment(user_id)
 
-        success = await add_payment(user_id, period)
+        # Оплата через Telegram Stars
+        success = await add_payment(user_id, period_months, payment_method='stars')
         if not success:
             await message.answer("Ошибка активации подписки. Обратитесь в поддержку.")
             return
@@ -700,10 +710,10 @@ async def successful_payment_handler(message: Message):
         action_word = "продлена" if was_active else "активирована"
 
         # Определяем текст периода для отображения
-        if period == 'special':
+        if period_months == 0:
             period_text = "7 дней"
         else:
-            period_text = f"{period} мес."
+            period_text = f"{period_months} мес."
         
         await message.answer(
             text=f"""<b>✅ Оплата успешно выполнена</b>

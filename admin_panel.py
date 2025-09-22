@@ -4,7 +4,7 @@ import asyncio
 from aiogram import types, F
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from config import ADMIN_ID, DB_PATH
+from config import ADMIN_IDS, DB_PATH
 import aiosqlite
 from datetime import datetime, timedelta
 from database import (
@@ -23,11 +23,10 @@ from database import (
     get_referral_details,
 )
 
-# Список ID администраторов
-ADMIN_IDS = [ADMIN_ID, 2057750889]  # Добавьте нужные ID
+# Список ID администраторов берётся из .env через config.ADMIN_IDS
 
 # Состояния для админ панели
-admin_states = {2057750889: True}
+admin_states = {}
 
 def is_admin(user_id: int) -> bool:
     """Проверяет, является ли пользователь администратором"""
@@ -332,6 +331,7 @@ async def get_detailed_stats():
             'revenue_week': payment_stats.get('revenue_week', 0),
             'revenue_month': payment_stats.get('revenue_month', 0),
             'avg_payment': payment_stats.get('avg_payment', 0),
+            'subs_7d': payment_stats.get('subs_7d', 0),
             'subs_1m': payment_stats.get('subs_1m', 0),
             'subs_3m': payment_stats.get('subs_3m', 0),
             'subs_6m': payment_stats.get('subs_6m', 0),
@@ -349,6 +349,7 @@ async def get_detailed_stats():
             'revenue_week': 0,
             'revenue_month': 0,
             'avg_payment': 0,
+            'subs_7d': 0,
             'subs_1m': 0,
             'subs_3m': 0,
             'subs_6m': 0,
@@ -484,7 +485,6 @@ def register_admin_handlers(dp):
     async def admin_command(message: Message):
         """Обработчик команды /admin"""
         if not is_admin(message.from_user.id):
-            await message.answer("❌ У вас нет прав доступа к админ панели.")
             return
         
         stats = await get_admin_stats()
@@ -532,6 +532,7 @@ def register_admin_handlers(dp):
 • Средний чек: <code>{stats['avg_payment']}₽</code>
 
 <b>📈 Подписки по периодам:</b>
+• 7 дней: <code>{stats['subs_7d']}</code>
 • 1 месяц: <code>{stats['subs_1m']}</code>
 • 3 месяца: <code>{stats['subs_3m']}</code>
 • 6 месяцев: <code>{stats['subs_6m']}</code>
@@ -1108,6 +1109,7 @@ def register_admin_handlers(dp):
 • Средний чек: <code>{payment_stats['avg_payment']}₽</code>
 
 <b>📈 Подписки по периодам:</b>
+• 7 дней: <code>{payment_stats['subs_7d']}</code> шт.
 • 1 месяц: <code>{payment_stats['subs_1m']}</code> шт.
 • 3 месяца: <code>{payment_stats['subs_3m']}</code> шт.
 • 6 месяцев: <code>{payment_stats['subs_6m']}</code> шт.

@@ -2,7 +2,7 @@ import aiosqlite
 from datetime import datetime, timedelta
 import aiohttp
 import logging
-from config import DB_PATH
+from config import DB_PATH, PRICES
 from dateutil.relativedelta import relativedelta
 
 __all__ = [
@@ -190,18 +190,20 @@ async def check_user_payment(user_id: int) -> bool:
         logging.error(f"Ошибка проверки подписки для {user_id}: {e}")
         return False
 
-async def add_payment(user_id: int, period_months: int) -> bool:
+async def add_payment(user_id: int, period_months: int, payment_method: str = 'yookassa') -> bool:
     """Добавляет платеж и обновляет подписку"""
     try:
         payment_date = datetime.now()
         
-        # Определяем сумму платежа
-        prices = {1: 149, 3: 399, 6: 699, 12: 999}
-        amount = prices.get(period_months, 149)
-        
-        # Обработка специальной подписки (7 дней за 10₽)
-        if period_months == 0:  # Специальная подписка
-            amount = 10
+        # Определяем сумму платежа по актуальным ценам из конфигурации (в рублях)
+        if period_months == 0:
+            amount = 1  # Специальная подписка 7 дней
+        else:
+            try:
+                # PRICES хранит цены в копейках
+                amount = PRICES.get(str(period_months), PRICES.get('1')) // 100
+            except Exception:
+                amount = 0
         
         async with aiosqlite.connect(DB_PATH) as conn:
             cursor = await conn.execute(
@@ -307,7 +309,7 @@ async def add_payment(user_id: int, period_months: int) -> bool:
                 INSERT INTO payments (user_id, amount, period, payment_date, payment_method)
                 VALUES (?, ?, ?, ?, ?)
                 ''',
-                (user_id, amount, period_months, payment_date.strftime('%d.%m.%Y %H:%M'), 'yookassa')
+                (user_id, amount, period_months, payment_date.strftime('%d.%m.%Y %H:%M'), payment_method)
             )
             
             await conn.commit()
@@ -724,14 +726,17 @@ async def get_payment_stats():
             avg_result = await cursor.fetchone()
             stats['avg_payment'] = round(avg_result[0], 2) if avg_result and avg_result[0] else 0
             
-            # Подписки по периодам
-            for period in [1, 3, 6, 12]:
+            # Подписки по периодам (включая спец-подписку 7 дней как period=0)
+            for period in [0, 1, 3, 6, 12]:
                 cursor = await conn.execute(
                     "SELECT COUNT(*) FROM payments WHERE period = ?",
                     (period,)
                 )
                 result = await cursor.fetchone()
-                stats[f'subs_{period}m'] = result[0] if result else 0
+                if period == 0:
+                    stats['subs_7d'] = result[0] if result else 0
+                else:
+                    stats[f'subs_{period}m'] = result[0] if result else 0
             
             return stats
     except Exception as e:
@@ -741,6 +746,7 @@ async def get_payment_stats():
             'revenue_week': 0,
             'revenue_month': 0,
             'avg_payment': 0,
+            'subs_7d': 0,
             'subs_1m': 0,
             'subs_3m': 0,
             'subs_6m': 0,
@@ -778,20 +784,19 @@ async def extend_user_subscription(user_id: int, days: int):
                         continue
                 
                 if current_expiry:
-                    # Продлеваем по календарным месяцам
-                    months = days // 30 if days >= 30 else 1
-                    new_expiry = current_expiry + relativedelta(months=months)
-                    
+                    # Продлеваем на точное количество дней
+                    new_expiry = current_expiry + timedelta(days=days)
+
                     await conn.execute(
                         "UPDATE users SET expiry_date = ?, subscribed = 1, notified_expiring_2d = 0 WHERE user_id = ?",
                         (new_expiry.strftime('%d.%m.%Y %H:%M'), user_id)
                     )
                     await conn.commit()
-                    
-                    # Пытаемся продлить на VPN сервере
+
+                    # Пытаемся продлить на VPN сервере (в днях)
                     await extend_vpn_config(user_id, days)
-                    
-                    logging.info(f"Подписка пользователя {user_id} продлена на {months} месяцев. Новое окончание: {new_expiry.strftime('%d.%m.%Y %H:%M')}")
+
+                    logging.info(f"Подписка пользователя {user_id} продлена на {days} дней. Новое окончание: {new_expiry.strftime('%d.%m.%Y %H:%M')}")
                     return True
             except Exception as e:
                 logging.error(f"Ошибка продления подписки: {e}")

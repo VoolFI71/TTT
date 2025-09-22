@@ -11,11 +11,7 @@ if not TOKEN:
 CHANNEL_ID = os.getenv('CHANNEL_ID')
 if not CHANNEL_ID:
     raise ValueError("CHANNEL_ID не установлен в переменных окружения")
-
-ADMIN_ID = os.getenv('ADMIN_ID')
-if not ADMIN_ID:
-    raise ValueError("ADMIN_ID не установлен в переменных окружения")
-ADMIN_ID = int(ADMIN_ID)
+# Single ADMIN_ID no longer required; use ADMIN_IDS instead
 
 WELCOME_GIF_URL = os.getenv('WELCOME_GIF_URL', '')
 

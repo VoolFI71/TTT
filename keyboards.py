@@ -46,7 +46,7 @@ def get_subscription_keyboard(show_special: bool = False):
     # Специальная подписка для новых пользователей
     if show_special:
         buttons.append([
-            InlineKeyboardButton(text="7 дней - 10₽", callback_data="sub_special")
+            InlineKeyboardButton(text="7 дней - 1₽", callback_data="sub_special")
         ])
     
     # Обычные подписки (по 2 на строку)

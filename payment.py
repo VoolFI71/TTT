@@ -31,7 +31,7 @@ async def cancel_all_payment_tasks():
 async def create_payment(period: str, user_id: int):
     """Создает платеж в ЮKассе"""
     periods = {
-        'special': {'value': '10.00', 'description': '7 дней'},
+        'special': {'value': '1.00', 'description': '7 дней'},
         '1': {'value': '99.00', 'description': '1 месяц'},
         '3': {'value': '279.00', 'description': '3 месяца'},
         '6': {'value': '549.00', 'description': '6 месяцев'},
@@ -111,10 +111,12 @@ async def check_payment_status(payment_data: dict, bot):
                         period_months = 0  # Специальная подписка
                     else:
                         period_months = int(payment_data['period'])
-                    
+
+                    # ЮKassa платеж
                     success = await add_payment(
                         payment_data['user_id'],
-                        period_months
+                        period_months,
+                        payment_method='yookassa'
                     )
                     
                     if not success:
