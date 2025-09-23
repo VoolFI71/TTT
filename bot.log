@@ -7526,3 +7526,315 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: messa
 2025-09-22 15:42:44,244 - aiogram.event - INFO - Update id=224569120 is handled. Duration 77 ms by bot id=8238763231
 2025-09-22 15:42:45,466 - aiogram.event - INFO - Update id=224569121 is handled. Duration 77 ms by bot id=8238763231
 2025-09-22 15:42:47,094 - aiogram.event - INFO - Update id=224569122 is handled. Duration 108 ms by bot id=8238763231
+2025-09-23 15:09:56,464 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 15:09:56,716 - aiogram.dispatcher - INFO - Run polling for bot @Shard_Vpnbot id=8495748481 - 'Shard VPN'
+2025-09-23 15:10:00,776 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-23 15:10:00,776 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8495748481)
+2025-09-23 15:10:00,966 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002040F644850>
+2025-09-23 15:10:00,967 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002040F5E4CA0>, 1001.468)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002040F644970>
+2025-09-23 15:10:00,967 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-5' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-23 15:10:00,967 - asyncio - ERROR - Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002040F643E80>
+transport: <_ProactorSocketTransport fd=796 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 361, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 397, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+2025-09-23 15:10:00,992 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-23 15:10:00,992 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<main.<locals>.notify_expiring_loop() running at C:\shard vpn\bot.py:759> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-23 15:10:00,993 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<main.<locals>.notify_all_expiring_loop() running at C:\shard vpn\bot.py:812> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-23 15:10:00,993 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future finished result=True> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-23 15:10:00,993 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<Dispatcher._polling() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:373> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-23 15:10:00,993 - aiogram.dispatcher - INFO - Polling stopped for bot @Shard_Vpnbot id=8495748481 - 'Shard VPN'
+2025-09-23 15:10:00,993 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-23 15:10:35,957 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 15:10:36,145 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-23 15:10:36,205 - root - INFO - Добавлен новый пользователь бота: 782889970 (abolfazl)
+2025-09-23 15:10:36,210 - root - INFO - Пользователь 782889970 (abolfazl) добавлен в базу бота
+2025-09-23 15:10:36,418 - aiogram.event - INFO - Update id=224569123 is handled. Duration 202 ms by bot id=8238763231
+2025-09-23 15:11:02,013 - aiogram.event - INFO - Update id=224569124 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 15:11:04,387 - aiogram.event - INFO - Update id=224569125 is handled. Duration 187 ms by bot id=8238763231
+2025-09-23 15:11:05,812 - root - ERROR - Ошибка создания платежа: {'type': 'error', 'id': '0199767c-04e1-78a5-96f3-935306834bd7', 'description': 'Receipt is missing or illegal', 'parameter': 'receipt', 'code': 'invalid_request'}
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 54, in request
+    raw_response = self.execute(body, method, path, query_params, request_headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 87, in execute
+    self.log_response(raw_response.content, self.get_response_info(raw_response), raw_response.headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 179, in get_response_info
+    "raise_for_status": response.raise_for_status(),
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://api.yookassa.ru/v3/payments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\shard vpn\payment.py", line 46, in create_payment
+    payment = Payment.create({
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\payment.py", line 66, in create
+    response = instance.client.request(HttpVerb.POST, path, None, headers, params_object)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 56, in request
+    self.__handle_error(e.response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 145, in __handle_error
+    raise BadRequestError(raw_response.json())
+yookassa.domain.exceptions.bad_request_error.BadRequestError: {'type': 'error', 'id': '0199767c-04e1-78a5-96f3-935306834bd7', 'description': 'Receipt is missing or illegal', 'parameter': 'receipt', 'code': 'invalid_request'}
+2025-09-23 15:11:05,935 - aiogram.event - INFO - Update id=224569126 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 15:12:00,017 - root - ERROR - Ошибка создания платежа: {'type': 'error', 'id': '0199767c-d89a-7e46-8046-2ebc0b1c1037', 'description': 'Receipt is missing or illegal', 'parameter': 'receipt', 'code': 'invalid_request'}
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 54, in request
+    raw_response = self.execute(body, method, path, query_params, request_headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 87, in execute
+    self.log_response(raw_response.content, self.get_response_info(raw_response), raw_response.headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 179, in get_response_info
+    "raise_for_status": response.raise_for_status(),
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error:  for url: https://api.yookassa.ru/v3/payments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\shard vpn\payment.py", line 46, in create_payment
+    payment = Payment.create({
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\payment.py", line 66, in create
+    response = instance.client.request(HttpVerb.POST, path, None, headers, params_object)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 56, in request
+    self.__handle_error(e.response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 145, in __handle_error
+    raise BadRequestError(raw_response.json())
+yookassa.domain.exceptions.bad_request_error.BadRequestError: {'type': 'error', 'id': '0199767c-d89a-7e46-8046-2ebc0b1c1037', 'description': 'Receipt is missing or illegal', 'parameter': 'receipt', 'code': 'invalid_request'}
+2025-09-23 15:12:00,092 - aiogram.event - INFO - Update id=224569127 is handled. Duration 250 ms by bot id=8238763231
+2025-09-23 15:12:56,747 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 15:12:56,918 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-23 15:13:00,232 - aiogram.event - INFO - Update id=224569128 is handled. Duration 296 ms by bot id=8238763231
+2025-09-23 15:13:01,435 - aiogram.event - INFO - Update id=224569129 is handled. Duration 141 ms by bot id=8238763231
+2025-09-23 15:13:02,760 - aiogram.event - INFO - Update id=224569130 is handled. Duration 406 ms by bot id=8238763231
+2025-09-23 15:22:00,338 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 15:22:00,546 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-23 15:22:02,626 - aiogram.event - INFO - Update id=224569131 is handled. Duration 202 ms by bot id=8238763231
+2025-09-23 15:22:04,299 - aiogram.event - INFO - Update id=224569132 is handled. Duration 188 ms by bot id=8238763231
+2025-09-23 15:22:08,101 - aiogram.event - INFO - Update id=224569133 is handled. Duration 452 ms by bot id=8238763231
+2025-09-23 15:24:34,459 - root - INFO - Добавлен новый пользователь бота: 6489448421 (S)
+2025-09-23 15:24:34,469 - root - INFO - Пользователь 6489448421 (S) добавлен в базу бота
+2025-09-23 15:24:34,556 - aiogram.event - INFO - Update id=224569134 is handled. Duration 109 ms by bot id=8238763231
+2025-09-23 15:24:41,348 - aiogram.event - INFO - Update id=224569135 is handled. Duration 77 ms by bot id=8238763231
+2025-09-23 15:32:13,343 - root - WARNING - Платеж 3064a4ad-000f-5000-b000-1c6a678cad59 не завершился в течение 10 минут
+2025-09-23 15:45:59,140 - aiogram.event - INFO - Update id=224569136 is handled. Duration 547 ms by bot id=8238763231
+2025-09-23 15:46:01,008 - aiogram.event - INFO - Update id=224569137 is handled. Duration 188 ms by bot id=8238763231
+2025-09-23 15:46:02,160 - aiogram.event - INFO - Update id=224569138 is handled. Duration 141 ms by bot id=8238763231
+2025-09-23 15:46:03,845 - aiogram.event - INFO - Update id=224569139 is handled. Duration 500 ms by bot id=8238763231
+2025-09-23 15:51:04,180 - aiogram.event - INFO - Update id=224569140 is handled. Duration 250 ms by bot id=8238763231
+2025-09-23 15:51:26,188 - aiogram.event - INFO - Update id=224569141 is handled. Duration 10719 ms by bot id=8238763231
+2025-09-23 15:51:30,722 - aiogram.event - INFO - Update id=224569142 is handled. Duration 8420 ms by bot id=8238763231
+2025-09-23 15:51:30,860 - __main__ - ERROR - Ошибка при возврате к подпискам: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-09-23 15:51:30,913 - aiogram.event - INFO - Update id=224569143 is handled. Duration 4719 ms by bot id=8238763231
+2025-09-23 15:51:30,934 - aiogram.event - INFO - Update id=224569144 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 15:52:56,422 - root - ERROR - Ошибка проверки платежа: 'NoneType' object has no attribute 'status_code'
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1071, in _create
+    self.do_handshake()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1342, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 54, in request
+    raw_response = self.execute(body, method, path, query_params, request_headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 77, in execute
+    raw_response = session.request(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\shard vpn\payment.py", line 109, in check_payment_status
+    payment = Payment.find_one(payment_id)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\payment.py", line 35, in find_one
+    response = instance.client.request(HttpVerb.GET, path)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 56, in request
+    self.__handle_error(e.response)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 143, in __handle_error
+    http_code = raw_response.status_code
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-09-23 15:54:01,479 - aiogram.event - INFO - Update id=224569145 is handled. Duration 170 ms by bot id=8238763231
+2025-09-23 15:54:02,709 - aiogram.event - INFO - Update id=224569146 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 15:54:04,081 - aiogram.event - INFO - Update id=224569147 is handled. Duration 202 ms by bot id=8238763231
+2025-09-23 15:54:05,311 - aiogram.event - INFO - Update id=224569148 is handled. Duration 547 ms by bot id=8238763231
+2025-09-23 15:54:07,862 - aiogram.event - INFO - Update id=224569149 is handled. Duration 155 ms by bot id=8238763231
+2025-09-23 15:54:08,814 - aiogram.event - INFO - Update id=224569150 is handled. Duration 344 ms by bot id=8238763231
+2025-09-23 15:54:10,241 - aiogram.event - INFO - Update id=224569151 is handled. Duration 266 ms by bot id=8238763231
+2025-09-23 15:54:11,264 - aiogram.event - INFO - Update id=224569152 is handled. Duration 375 ms by bot id=8238763231
+2025-09-23 15:54:12,391 - aiogram.event - INFO - Update id=224569153 is handled. Duration 202 ms by bot id=8238763231
+2025-09-23 15:54:13,249 - aiogram.event - INFO - Update id=224569154 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 15:54:15,060 - aiogram.event - INFO - Update id=224569155 is handled. Duration 375 ms by bot id=8238763231
+2025-09-23 15:54:16,187 - aiogram.event - INFO - Update id=224569156 is handled. Duration 327 ms by bot id=8238763231
+2025-09-23 15:54:17,648 - aiogram.event - INFO - Update id=224569157 is handled. Duration 139 ms by bot id=8238763231
+2025-09-23 15:54:23,555 - aiogram.event - INFO - Update id=224569158 is handled. Duration 438 ms by bot id=8238763231
+2025-09-23 15:56:54,905 - root - WARNING - Платеж 3064aa49-000f-5000-8000-1468810f7334 не завершился в течение 10 минут
+2025-09-23 16:01:22,489 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 16:01:22,707 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-23 16:01:23,002 - __main__ - ERROR - Ошибка при возврате к подпискам: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-09-23 16:01:23,054 - aiogram.event - INFO - Update id=224569159 is not handled. Duration 297 ms by bot id=8238763231
+2025-09-23 16:01:23,055 - aiogram.event - ERROR - Cause exception while process update id=224569159 by bot id=8238763231
+TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+Traceback (most recent call last):
+  File "C:\shard vpn\bot.py", line 306, in back_to_subscriptions
+    await callback.answer()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+  File "C:\shard vpn\bot.py", line 309, in back_to_subscriptions
+    await callback.answer("Произошла ошибка. Попробуйте позже.", show_alert=True)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query is too old and response timeout expired or query ID is invalid
+2025-09-23 16:01:46,081 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-23 16:01:46,086 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-23 16:01:46,167 - aiogram.event - INFO - Update id=224569160 is handled. Duration 78 ms by bot id=8238763231
+2025-09-23 16:01:47,396 - aiogram.event - INFO - Update id=224569161 is handled. Duration 108 ms by bot id=8238763231
+2025-09-23 16:02:51,626 - aiogram.event - INFO - Update id=224569162 is handled. Duration 235 ms by bot id=8238763231
+2025-09-23 16:02:53,115 - aiogram.event - INFO - Update id=224569163 is handled. Duration 125 ms by bot id=8238763231
+2025-09-23 16:02:54,620 - aiogram.event - INFO - Update id=224569164 is handled. Duration 327 ms by bot id=8238763231
+2025-09-23 16:03:47,726 - aiogram.event - INFO - Update id=224569165 is handled. Duration 92 ms by bot id=8238763231
+2025-09-23 16:03:48,669 - aiogram.event - INFO - Update id=224569166 is handled. Duration 140 ms by bot id=8238763231
+2025-09-23 16:03:49,824 - aiogram.event - INFO - Update id=224569167 is handled. Duration 375 ms by bot id=8238763231
+2025-09-23 16:04:32,455 - aiogram.event - INFO - Update id=224569168 is handled. Duration 140 ms by bot id=8238763231
+2025-09-23 16:04:33,880 - aiogram.event - INFO - Update id=224569169 is handled. Duration 313 ms by bot id=8238763231
+2025-09-23 16:04:49,187 - aiogram.event - INFO - Update id=224569170 is handled. Duration 155 ms by bot id=8238763231
+2025-09-23 16:04:51,439 - aiogram.event - INFO - Update id=224569171 is handled. Duration 328 ms by bot id=8238763231
+2025-09-23 16:04:59,471 - aiogram.event - INFO - Update id=224569172 is handled. Duration 155 ms by bot id=8238763231
+2025-09-23 16:08:02,318 - aiogram.dispatcher - INFO - Start polling
+2025-09-23 16:08:02,510 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-23 16:08:02,577 - aiogram.event - INFO - Update id=224569174 is handled. Duration 15 ms by bot id=8238763231
+2025-09-23 16:08:03,108 - aiogram.event - INFO - Update id=224569173 is handled. Duration 546 ms by bot id=8238763231
+2025-09-23 16:08:03,227 - aiogram.event - INFO - Update id=224569175 is handled. Duration 640 ms by bot id=8238763231
+2025-09-23 16:08:06,698 - aiogram.event - INFO - Update id=224569176 is handled. Duration 61 ms by bot id=8238763231
+2025-09-23 16:08:07,664 - aiogram.event - INFO - Update id=224569177 is handled. Duration 78 ms by bot id=8238763231
+2025-09-23 16:08:08,804 - aiogram.event - INFO - Update id=224569178 is handled. Duration 157 ms by bot id=8238763231
+2025-09-23 16:08:10,497 - aiogram.event - INFO - Update id=224569179 is handled. Duration 94 ms by bot id=8238763231
+2025-09-23 16:08:16,768 - aiogram.event - INFO - Update id=224569180 is handled. Duration 77 ms by bot id=8238763231
+2025-09-23 16:08:18,288 - aiogram.event - INFO - Update id=224569181 is handled. Duration 78 ms by bot id=8238763231
+2025-09-23 16:08:19,321 - aiogram.event - INFO - Update id=224569182 is handled. Duration 78 ms by bot id=8238763231
+2025-09-23 16:08:20,334 - aiogram.event - INFO - Update id=224569183 is handled. Duration 94 ms by bot id=8238763231
+2025-09-23 16:08:21,877 - aiogram.event - INFO - Update id=224569184 is handled. Duration 110 ms by bot id=8238763231
+2025-09-23 16:08:23,322 - aiogram.event - INFO - Update id=224569185 is handled. Duration 344 ms by bot id=8238763231
+2025-09-23 16:09:16,253 - aiogram.event - INFO - Update id=224569186 is handled. Duration 157 ms by bot id=8238763231
+2025-09-23 16:09:17,972 - aiogram.event - INFO - Update id=224569187 is handled. Duration 436 ms by bot id=8238763231
+2025-09-23 16:11:18,991 - root - INFO - Пользователь 8272216832 добавлен в bot_users при оплате
+2025-09-23 16:11:19,235 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 30.09.2025 16:11
+2025-09-23 16:12:24,555 - aiogram.event - INFO - Update id=224569188 is handled. Duration 171 ms by bot id=8238763231
+2025-09-23 16:12:26,441 - aiogram.event - INFO - Update id=224569189 is handled. Duration 297 ms by bot id=8238763231
+2025-09-23 16:12:27,839 - aiogram.event - INFO - Update id=224569190 is handled. Duration 359 ms by bot id=8238763231
+2025-09-23 16:12:34,292 - aiogram.event - INFO - Update id=224569191 is handled. Duration 172 ms by bot id=8238763231

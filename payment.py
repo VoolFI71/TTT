@@ -2,6 +2,7 @@ import uuid
 import asyncio
 import aiosqlite
 import logging
+import requests
 from yookassa import Configuration, Payment
 from config import YOOKASSA_SHOP_ID, YOOKASSA_SECRET_KEY, YOOKASSA_RETURN_URL, DB_PATH
 from database import add_payment
@@ -43,9 +44,33 @@ async def create_payment(period: str, user_id: int):
         return None
     
     try:
+        amount_value = periods[period]['value']
+        description = f"Shard: {periods[period]['description']}"
+
+        # Формируем чек (54-ФЗ)
+        receipt = {
+            "customer": {
+                # Желательно подставлять реальный email/телефон пользователя
+                "email": f"shardcheks@gmail.com"
+            },
+            "items": [
+                {
+                    "description": description,
+                    "quantity": "1.00",
+                    "amount": {
+                        "value": amount_value,
+                        "currency": "RUB"
+                    },
+                    "vat_code": 1,
+                    "payment_mode": "full_prepayment",
+                    "payment_subject": "service"
+                }
+            ]
+        }
+
         payment = Payment.create({
             "amount": {
-                "value": periods[period]['value'],
+                "value": amount_value,
                 "currency": "RUB"
             },
             "confirmation": {
@@ -53,7 +78,8 @@ async def create_payment(period: str, user_id: int):
                 "return_url": YOOKASSA_RETURN_URL
             },
             "capture": True,
-            "description": f"Shard VPN: {periods[period]['description']}",
+            "description": description,
+            "receipt": receipt,
             "metadata": {
                 "user_id": str(user_id),
                 "period": period
@@ -178,7 +204,17 @@ async def check_payment_status(payment_data: dict, bot):
                     return False
                     
             except Exception as e:
-                logging.error(f"Ошибка проверки платежа: {str(e)}", exc_info=True)
+                error_text = str(e)
+                # Мягко обрабатываем сетевые/транспортные сбои SDK (response=None и т.п.)
+                if (
+                    "Connection aborted" in error_text
+                    or "status_code" in error_text
+                    or "Max retries" in error_text
+                    or isinstance(e, requests.exceptions.ConnectionError)
+                ):
+                    logging.warning(f"Сетевая ошибка ЮKassa при проверке платежа {payment_id}: {error_text}")
+                else:
+                    logging.error(f"Ошибка проверки платежа: {error_text}", exc_info=True)
             
             try:
                 await asyncio.sleep(10)

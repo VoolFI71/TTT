@@ -303,10 +303,17 @@ async def back_to_subscriptions(callback: types.CallbackQuery):
             text=text,
             reply_markup=get_subscription_keyboard(show_special)
         )
-        await callback.answer()
+        # Ответ на коллбек может быть просрочен — игнорируем ошибку таймаута
+        try:
+            await callback.answer()
+        except Exception:
+            pass
     except Exception as e:
         logger.error(f"Ошибка при возврате к подпискам: {e}")
-        await callback.answer("Произошла ошибка. Попробуйте позже.", show_alert=True)
+        try:
+            await callback.answer("Произошла ошибка. Попробуйте позже.", show_alert=True)
+        except Exception:
+            pass
         
 @dp.callback_query(F.data.startswith('check_pay:'))
 async def check_payment_callback(callback: types.CallbackQuery):
