@@ -21,6 +21,7 @@ from database import (
     activate_user_subscription,
     get_all_referral_stats,
     get_referral_details,
+    get_referral_overview,
 )
 
 # Список ID администраторов берётся из .env через config.ADMIN_IDS
@@ -183,6 +184,9 @@ def get_admin_main_keyboard():
         [
             InlineKeyboardButton(text="💰 Платежи", callback_data="admin_payments"),
             InlineKeyboardButton(text="👥 Рефералы", callback_data="admin_referrals")
+        ],
+        [
+            InlineKeyboardButton(text="📊 Реферальная аналитика", callback_data="admin_referral_analytics")
         ],
         [
             InlineKeyboardButton(text="📢 Рассылка", callback_data="admin_broadcast"),
@@ -601,7 +605,7 @@ def register_admin_handlers(dp):
     async def handle_user_id_input(message: Message):
         """Обработка ввода ID пользователя - ТОЛЬКО для админов"""
         state_value = admin_states.get(message.from_user.id)
-        if state_value not in ("waiting_user_id", "waiting_user_id_for_subscription", "waiting_referrer_id"):
+        if state_value not in ("waiting_user_id", "waiting_user_id_for_subscription", "waiting_referrer_id", "waiting_referrer_detailed"):
             # Не в нужном состоянии — просто выходим, чтобы отработали обычные хендлеры бота
             return
         if state_value == "waiting_user_id":
@@ -766,6 +770,79 @@ def register_admin_handlers(dp):
                 await message.answer(
                     f"<b>🎁 Выдача подписки</b>\n\n<b>Пользователь:</b> {user_name} (<code>{user_id}</code>)\n\nВыберите период подписки:",
                     reply_markup=subscription_keyboard
+                )
+            
+            # Сбрасываем состояние
+            admin_states.pop(message.from_user.id, None)
+            return
+        elif state_value == "waiting_referrer_detailed":
+            try:
+                referrer_id = int(message.text)
+                
+                # Получаем детальную информацию о реферере
+                overview = await get_referral_overview(referrer_id)
+                referrals = await get_referral_details(referrer_id)
+                
+                # Получаем информацию о пользователе
+                async with aiosqlite.connect(DB_PATH) as conn:
+                    cursor = await conn.execute(
+                        "SELECT username, first_name, referral_balance FROM bot_users WHERE user_id = ?",
+                        (referrer_id,)
+                    )
+                    user_info = await cursor.fetchone()
+                
+                if not user_info:
+                    await message.answer(
+                        f"❌ Пользователь <code>{referrer_id}</code> не найден.",
+                        reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                            [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                        ])
+                    )
+                else:
+                    username, first_name, balance = user_info
+                    name = first_name or username or f"ID {referrer_id}"
+                    
+                    detailed_text = f"""
+<b>🔍 Детальная информация о реферере</b>
+
+<b>👤 Пользователь:</b> {name} (<code>{referrer_id}</code>)
+<b>💰 Баланс:</b> {balance or 0:.2f}₽
+
+<b>📊 Статистика:</b>
+• 1-я линия: {overview['level1']} рефералов
+• 2-я линия: {overview['level2']} рефералов  
+• 3-я линия: {overview['level3']} рефералов
+• За сегодня: {overview['today_first_line']} рефералов
+
+<b>👥 Рефералы 1-й линии:</b>
+"""
+                    
+                    if referrals:
+                        for referred_id, ref_username, ref_first_name, ref_last_name, referral_date, status in referrals[:10]:
+                            ref_name = ref_first_name or ref_username or f"ID {referred_id}"
+                            status_emoji = "✅" if status == "Подписан" else "❌"
+                            detailed_text += f"{status_emoji} <code>{referred_id}</code> - {ref_name}\n"
+                            detailed_text += f"   Дата: {referral_date}, Статус: {status}\n"
+                        
+                        if len(referrals) > 10:
+                            detailed_text += f"\n... и ещё {len(referrals) - 10} рефералов"
+                    else:
+                        detailed_text += "Нет рефералов"
+                    
+                    await message.answer(
+                        text=detailed_text,
+                        reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                            [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                        ])
+                    )
+            
+            except Exception as e:
+                logging.error(f"Ошибка обработки детального поиска реферера: {e}")
+                await message.answer(
+                    "❌ Ошибка при обработке запроса.",
+                    reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                    ])
                 )
             
             # Сбрасываем состояние
@@ -1191,6 +1268,11 @@ def register_admin_handlers(dp):
                 await conn.execute("DELETE FROM users")
                 await conn.execute("DELETE FROM bot_users")
                 await conn.execute("DELETE FROM payments")
+                # Очистка реферальных данных
+                await conn.execute("DELETE FROM referrals")
+                await conn.execute("DELETE FROM referral_rewards")
+                # На случай частичной очистки — обнуление реф полей
+                await conn.execute("UPDATE bot_users SET referrer_id = NULL, total_referrals = 0, referral_balance = 0")
                 await conn.commit()
         
             await callback.message.edit_text(
@@ -1487,4 +1569,218 @@ def register_admin_handlers(dp):
             
             # Сбрасываем состояние
             admin_states.pop(message.from_user.id, None)
+
+    @dp.callback_query(F.data == "admin_referral_analytics")
+    async def admin_referral_analytics_callback(callback: types.CallbackQuery):
+        """Аналитика реферальной системы"""
+        if not is_admin(callback.from_user.id):
+            await callback.answer("❌ Нет доступа", show_alert=True)
+            return
+        
+        try:
+            # Получаем общую статистику рефералов
+            stats = await get_all_referral_stats()
+            
+            # Получаем топ рефереров с детальной информацией
+            async with aiosqlite.connect(DB_PATH) as conn:
+                cursor = await conn.execute(
+                    """SELECT 
+                        r.referrer_id,
+                        bu.username,
+                        bu.first_name,
+                        bu.referral_balance,
+                        COUNT(r.referred_id) as total_refs,
+                        COUNT(CASE WHEN u.subscribed = 1 AND p.payment_method != 'trial' THEN 1 END) as paid_refs
+                       FROM referrals r
+                       LEFT JOIN bot_users bu ON r.referrer_id = bu.user_id
+                       LEFT JOIN users u ON r.referred_id = u.user_id
+                       LEFT JOIN payments p ON u.user_id = p.user_id
+                       GROUP BY r.referrer_id
+                       ORDER BY total_refs DESC
+                       LIMIT 10"""
+                )
+                top_referrers = await cursor.fetchall()
+            
+            analytics_text = f"""
+<b>📊 Реферальная аналитика</b>
+
+<b>📈 Общая статистика:</b>
+• Всего рефералов: <code>{stats['total_referrals']}</code>
+• С платной подпиской: <code>{stats['subscribed_referrals']}</code>
+• Без подписки: <code>{stats['unsubscribed_referrals']}</code>
+• Конверсия: <code>{(stats['subscribed_referrals'] / stats['total_referrals'] * 100) if stats['total_referrals'] > 0 else 0:.1f}%</code>
+
+<b>🏆 Топ-10 рефереров:</b>
+"""
+            
+            if top_referrers:
+                for i, (referrer_id, username, first_name, balance, total_refs, paid_refs) in enumerate(top_referrers, 1):
+                    name = first_name or username or f"ID {referrer_id}"
+                    conversion = (paid_refs / total_refs * 100) if total_refs > 0 else 0
+                    analytics_text += f"{i:2d}. <code>{referrer_id}</code> - {name}\n"
+                    analytics_text += f"     Рефералов: {total_refs}, платных: {paid_refs} ({conversion:.1f}%)\n"
+                    analytics_text += f"     Баланс: {balance or 0:.2f}₽\n\n"
+            else:
+                analytics_text += "Нет данных о реферерах\n"
+            
+            analytics_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                [
+                    InlineKeyboardButton(text="🔍 Детали реферера", callback_data="admin_find_referrer_detailed"),
+                    InlineKeyboardButton(text="📊 Статистика по дням", callback_data="admin_referral_daily")
+                ],
+                [
+                    InlineKeyboardButton(text="💰 Топ по заработку", callback_data="admin_referral_earnings"),
+                    InlineKeyboardButton(text="📈 График активности", callback_data="admin_referral_chart")
+                ],
+                [
+                    InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back_main")
+                ]
+            ])
+            
+            await callback.message.edit_text(
+                text=analytics_text,
+                reply_markup=analytics_keyboard
+            )
+        except Exception as e:
+            logging.error(f"Ошибка получения реферальной аналитики: {e}")
+            await callback.answer("Ошибка получения данных", show_alert=True)
+
+    @dp.callback_query(F.data == "admin_find_referrer_detailed")
+    async def admin_find_referrer_detailed_callback(callback: types.CallbackQuery):
+        """Поиск реферера с детальной информацией"""
+        if not is_admin(callback.from_user.id):
+            await callback.answer("❌ Нет доступа", show_alert=True)
+            return
+        
+        admin_states[callback.from_user.id] = "waiting_referrer_detailed"
+        
+        await callback.message.edit_text(
+            text="<b>🔍 Детальная информация о реферере</b>\n\nОтправьте ID пользователя для просмотра детальной статистики:",
+            reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+            ])
+        )
+
+    @dp.callback_query(F.data == "admin_referral_daily")
+    async def admin_referral_daily_callback(callback: types.CallbackQuery):
+        """Статистика рефералов по дням"""
+        if not is_admin(callback.from_user.id):
+            await callback.answer("❌ Нет доступа", show_alert=True)
+            return
+        
+        try:
+            async with aiosqlite.connect(DB_PATH) as conn:
+                # Рефералы за последние 7 дней
+                cursor = await conn.execute(
+                    """SELECT 
+                        DATE(referral_date) as date,
+                        COUNT(*) as count
+                       FROM referrals 
+                       WHERE referral_date >= date('now', '-7 days')
+                       GROUP BY DATE(referral_date)
+                       ORDER BY date DESC"""
+                )
+                daily_stats = await cursor.fetchall()
+            
+            daily_text = "<b>📊 Рефералы за последние 7 дней</b>\n\n"
+            
+            if daily_stats:
+                for date, count in daily_stats:
+                    daily_text += f"• {date}: <code>{count}</code> рефералов\n"
+            else:
+                daily_text += "Нет данных за последние 7 дней"
+            
+            await callback.message.edit_text(
+                text=daily_text,
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                    [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                ])
+            )
+        except Exception as e:
+            logging.error(f"Ошибка получения дневной статистики: {e}")
+            await callback.answer("Ошибка получения данных", show_alert=True)
+
+    @dp.callback_query(F.data == "admin_referral_earnings")
+    async def admin_referral_earnings_callback(callback: types.CallbackQuery):
+        """Топ рефереров по заработку"""
+        if not is_admin(callback.from_user.id):
+            await callback.answer("❌ Нет доступа", show_alert=True)
+            return
+        
+        try:
+            async with aiosqlite.connect(DB_PATH) as conn:
+                cursor = await conn.execute(
+                    """SELECT 
+                        user_id,
+                        username,
+                        first_name,
+                        referral_balance,
+                        total_referrals
+                       FROM bot_users 
+                       WHERE referral_balance > 0
+                       ORDER BY referral_balance DESC
+                       LIMIT 10"""
+                )
+                top_earners = await cursor.fetchall()
+            
+            earnings_text = "<b>💰 Топ-10 по заработку</b>\n\n"
+            
+            if top_earners:
+                for i, (user_id, username, first_name, balance, total_refs) in enumerate(top_earners, 1):
+                    name = first_name or username or f"ID {user_id}"
+                    earnings_text += f"{i:2d}. <code>{user_id}</code> - {name}\n"
+                    earnings_text += f"     Заработано: <code>{balance:.2f}₽</code>\n"
+                    earnings_text += f"     Рефералов: <code>{total_refs}</code>\n\n"
+            else:
+                earnings_text += "Нет данных о заработке"
+            
+            await callback.message.edit_text(
+                text=earnings_text,
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                    [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                ])
+            )
+        except Exception as e:
+            logging.error(f"Ошибка получения топа по заработку: {e}")
+            await callback.answer("Ошибка получения данных", show_alert=True)
+
+    @dp.callback_query(F.data == "admin_referral_chart")
+    async def admin_referral_chart_callback(callback: types.CallbackQuery):
+        """График активности рефералов"""
+        if not is_admin(callback.from_user.id):
+            await callback.answer("❌ Нет доступа", show_alert=True)
+            return
+        
+        try:
+            async with aiosqlite.connect(DB_PATH) as conn:
+                # Статистика по часам за последние 24 часа
+                cursor = await conn.execute(
+                    """SELECT 
+                        strftime('%H', referral_date) as hour,
+                        COUNT(*) as count
+                       FROM referrals 
+                       WHERE referral_date >= datetime('now', '-1 day')
+                       GROUP BY strftime('%H', referral_date)
+                       ORDER BY hour"""
+                )
+                hourly_stats = await cursor.fetchall()
+            
+            chart_text = "<b>📈 Активность рефералов (последние 24 часа)</b>\n\n"
+            
+            if hourly_stats:
+                for hour, count in hourly_stats:
+                    bar = "█" * min(count, 20)  # Максимум 20 символов для бара
+                    chart_text += f"{hour:02d}:00 {bar} {count}\n"
+            else:
+                chart_text += "Нет данных за последние 24 часа"
+            
+            await callback.message.edit_text(
+                text=chart_text,
+                reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+                    [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_referral_analytics")]
+                ])
+            )
+        except Exception as e:
+            logging.error(f"Ошибка получения графика активности: {e}")
+            await callback.answer("Ошибка получения данных", show_alert=True)
 

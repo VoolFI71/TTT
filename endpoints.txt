@@ -1,0 +1,137 @@
+
+|--------|------|---------|
+| POST   | /createconfig           | Create _N_ new inactive configs and store them in DB |
+| POST   | /giveconfig             | Activate a free config for a Telegram-user |
+| POST   | /extendconfig           | Extend an existing config by _N_ days |
+| DELETE | /deleteconfig           | Remove one config (panel + DB) |
+| GET    | /check-available-configs| Check if there is a free config to give |
+
+| GET    | /subscription/{tg_id}   | Plain-text VLESS subscription for V2rayTun | возвращает конфиги каждый в новой строке, скопировав эту ссылку и вставив в v2raytun добавится подписка со всеми конфигами которые пользователь взял. чтобы левый чел не смог стырить чужую подписку(тк x api key, защиты нет), вместо tg_id будет какой то шифр для подписки.  #МОЖЕТ БЫТЬ БЕСПОЛЕЗНЫМ И МОЖНО ИСПОЛЬЗОВАТЬ ТОЛЬКО USERCODES(ПЕРЕДАВАТЬ СРАЗУ ВСЕ КОНФИГИ ВМЕСТО ОДНОГО В WEB_URL, КОТОРЫЙ СНИЗУ)
+
+| GET    | /add-config             | Helper HTML page to open config in Safari/V2rayTun |
+
+| GET    | /usercodes/{tg_id}      | List all configs tied to a Telegram user | возвращает все конфиги по отдельности, которые в подписке. То есть если реализуем подписки - чел покупает подписку,  делаем createconfig 3 раза с выбранными странами, тк у нас всего 3 страны допустим. Этот ендпоинт удобен чтобы выводить конфиг в тг бота, а subcription чтобы перенаправлять допустим по кнопке на сайте в приложение и чтобы конфиг вставлялся сам (как то реализовать в js                     `v2raytun://import/${config}`, вот так кнопка на js работает для открытия и добавления одного конфига, если он передается вот так как снизу в weburl
+
+import base64
+encoded_config = base64.b64encode(vless_config.encode()).decode()
+remaining_seconds = user['time_end'] - int(time.time())
+web_url = f"http://url:8080/add?config={encoded_config}&expiry={remaining_seconds}"
+то что сверху делаешь что то похожее в боте для кнопки с юрл на сайт. Тут кодируется в басе64  только один конфиг, надо узнать что делать в случае с несколькими конфигами, чтобы при нажатии на кнопку добавлялась подписка а не один конфиг. На этом сайте кнопка для добавления подписки/конфига в приложение. Сразу должно перекидывать по желанию в приложение при нажатии на сайте. На айфоне не работает, на андроиде работает вот такой способ настройки в html `v2raytun://import/${config}`, на айфоне перекидывает в приложение но не добавляет подписку/конфиг 
+
+
+## Endpoint Details
+
+### 1. Create inactive configs
+
+```
+POST /createconfig
+Headers:  X-API-Key: <AUTH_CODE>
+Body (JSON):
+{
+  "count": 3,     // ≥ 1 (default 1)
+  "server": "fi" // country code of backend server
+}
+```
+
+*Response 200*
+```
+[
+  "c12e7cb3-...",  // uid of each newly created client
+  "2b8181ab-...",
+  "e573a2f4-..."
+]
+```
+
+### 2. Give config to user
+
+```
+POST /giveconfig
+Headers:  X-API-Key
+Body (JSON):
+{
+  "id":   "123456789", // Telegram user ID
+  "time": 30,           // validity period in days
+  "server": "fi"
+}
+```
+*Response 200*: `"c12e7cb3-..."` — UID выданного конфига
+
+HTTP 409 if no свободных configs на выбранном сервере.
+
+### 3. Extend config
+
+```
+POST /extendconfig
+Headers:  X-API-Key
+Body:
+{
+  "uid": "c12e7cb3-...",
+  "time": 7,           // add days
+}
+```
+*Response 200*: `"Конфиг успешно продлён"`
+
+### 4. Delete one config
+
+```
+DELETE /deleteconfig
+Headers:  X-API-Key
+Body:
+{
+  "uid": "c12e7cb3-..."
+}
+```
+*Response 200*: `"Конфиг успешно удалён"`
+
+### 5. Delete **all** configs
+
+```
+
+### 6. Check free configs
+
+```
+GET /check-available-configs?server=fi 
+Headers: X-API-Key
+```
+*Response 200*
+```json
+{
+  "available": true,
+  "message": "Свободные конфиги доступны на выбранных странах-серверах"
+}
+```
+Parameter `server` is optional (all servers if omitted).
+
+### 7. List user configs
+
+```
+GET /usercodes/{tg_id}
+Headers: X-API-Key
+```
+*Response 200*
+```json
+[
+  {
+    "user_code": "c12e7cb3-...",
+    "time_end": 1709600000,   // Unix time stamp
+    "server": "fi"
+  }
+]
+```
+HTTP 404 if no active configs.
+
+### 8. Subscription
+
+```
+GET /subscription/{tg_id}
+```
+Returns `text/plain` – each line is a VLESS URL of active configs (for V2rayTun). No auth.
+
+### 9. Add-config helper page
+
+```
+GET /add-config?config=<base64(VLESS)> &expiry=<seconds>
+```
+Opens HTML page with deep-link for V2rayTun (no auth).
+
+

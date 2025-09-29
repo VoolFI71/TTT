@@ -5,7 +5,7 @@ import logging
 import requests
 from yookassa import Configuration, Payment
 from config import YOOKASSA_SHOP_ID, YOOKASSA_SECRET_KEY, YOOKASSA_RETURN_URL, DB_PATH
-from database import add_payment
+from database import add_payment, accrue_referral_commissions, calculate_amount_for_period
 from datetime import datetime
 # Настройка ЮKассы
 Configuration.configure(YOOKASSA_SHOP_ID, YOOKASSA_SECRET_KEY)
@@ -198,6 +198,12 @@ async def check_payment_status(payment_data: dict, bot):
 """,
                         message_effect_id="5046509860389126442"
                     )
+                    # Реферальные начисления
+                    try:
+                        amount_rub = calculate_amount_for_period(period_months)
+                        await accrue_referral_commissions(payment_data['user_id'], amount_rub, method='yookassa', bot=bot)
+                    except Exception as e:
+                        logging.error(f"Ошибка начисления реферальных: {e}")
                     return True
                     
                 elif payment.status in ("canceled", "failed"):

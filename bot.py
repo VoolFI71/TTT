@@ -1,17 +1,21 @@
 import logging
 import asyncio
 import aiohttp
+import aiosqlite
+from urllib.parse import quote
 from aiogram import types, F, Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, LabeledPrice
 from datetime import datetime
 
-from config import TOKEN, WELCOME_GIF_URL, STARS_PROVIDER_TOKEN, ADMIN_IDS, PRICES, CHANNEL_ID
+from config import TOKEN, WELCOME_GIF_URL, STARS_PROVIDER_TOKEN, ADMIN_IDS, PRICES, CHANNEL_ID, DB_PATH
 from database import (
     init_db, check_user_payment, add_payment, get_user_data, add_bot_user,
     get_users_expiring_in_days, get_all_users_expiring_in_days, 
-    mark_user_notified, has_paid_subscription
+    mark_user_notified, has_paid_subscription, has_used_trial, grant_trial_14d,
+    attach_referrer_chain, get_referral_overview, calculate_amount_for_period, accrue_referral_commissions,
+    check_referral_data
 )
 from payment import create_payment, check_payment_status, cancel_all_payment_tasks
 from yookassa import Payment
@@ -62,23 +66,83 @@ async def check_subscription(user_id: int) -> bool:
         return False
 
 @dp.message(Command("start"))
-async def cmd_start(message: Message):
-    """Единственный обработчик команды /start"""
+async def cmd_start(message: Message, command: Command = None):
+    """Единственный обработчик команды /start с поддержкой deep-link payload"""
     user = message.from_user
-    
-    
+
+    # Обрабатываем deep-link payload для пробного периода
+    try:
+        text = message.text or ""
+        payload = None
+        logger.info(f"Пользователь {user.id} отправил: '{text}'")
+        if text.startswith("/start "):
+            payload = text.split(" ", 1)[1].strip()
+            logger.info(f"Извлечен payload: '{payload}'")
+        if payload and payload.isdigit():
+            # Привязка реферальной цепочки (только при первом заходе)
+            try:
+                referrer_id = int(payload)
+                logger.info(f"Обработка реферальной ссылки: {user.id} -> {referrer_id}")
+                if referrer_id > 0 and referrer_id != user.id:
+                    # Проверяем, что пользователь еще не был в боте
+                    async with aiosqlite.connect(DB_PATH) as conn:
+                        cursor = await conn.execute(
+                            "SELECT first_interaction FROM bot_users WHERE user_id = ?",
+                            (user.id,)
+                        )
+                        existing_user = await cursor.fetchone()
+                        if not existing_user:
+                            # Первый заход - можно привязать к рефереру
+                            logger.info(f"Попытка привязать {user.id} к рефереру {referrer_id}")
+                            success = await attach_referrer_chain(user.id, referrer_id)
+                            logger.info(f"Результат привязки: {success}")
+                        else:
+                            logger.info(f"Пользователь {user.id} уже был в боте, привязка невозможна")
+                else:
+                    logger.info(f"Некорректный referrer_id: {referrer_id}")
+            except Exception as e:
+                logger.error(f"attach_referrer_chain error: {e}")
+        elif payload:
+            logger.info(f"Payload '{payload}' не является числом")
+        if payload and payload.lower() == "trial14":
+            # выдаём триал только если не использован ранее и нет платёжной подписки
+            if not await has_paid_subscription(user.id) and not await has_used_trial(user.id):
+                granted = await grant_trial_14d(user.id)
+                if granted:
+                    await message.answer(
+                        """
+<b>🎁 Включили бесплатный доступ на 14 дней!</b>
+
+Нажмите «Активировать VPN», чтобы получить ключ и подключиться.
+                        """,
+                        reply_markup=create_main_keyboard()
+                    )
+                    return
+            # Уже пользовался или есть платная подписка
+            await message.answer(
+                """
+⚠️ Пробный доступ уже использован или у вас есть подписка.
+
+Вы можете продлить или оформить подписку в разделе.
+                """,
+                reply_markup=create_main_keyboard()
+            )
+            return
+    except Exception as e:
+        logger.error(f"Ошибка обработки payload /start: {e}")
+
+    # Регистрируем пользователя в базе bot_users (после обработки реферальных ссылок)
     success = await add_bot_user(
         user_id=user.id,
         username=user.username,
         first_name=user.first_name,
         last_name=user.last_name
     )
-    
     if success:
         logging.info(f"Пользователь {user.id} ({user.first_name}) добавлен в базу бота")
     else:
         logging.error(f"Ошибка добавления пользователя {user.id} в базу бота")
-    
+
     welcome_text = f"""🌍 Добро пожаловать в <b>Shard VPN!</b>
 
 Свобода интернета без ограничений, блокировок и замедлений. С <b>Shard VPN</b> ты получаешь:
@@ -86,8 +150,8 @@ async def cmd_start(message: Message):
 • 🔒 Надёжную защиту
 • 🌐 Доступ к любым сервисам без границ
 
-<blockquote><i>💳Купи подписку и получи полный доступ к интернету без ограничений!</i></blockquote>"""
-    
+<blockquote><i>💳 Купи подписку и получи полный доступ к интернету без ограничений!</i></blockquote>"""
+
     await message.answer_animation(
         animation=WELCOME_GIF_URL,
         caption=welcome_text,
@@ -387,6 +451,54 @@ async def subscribe_from_profile(callback: types.CallbackQuery):
 @dp.callback_query(F.data == 'referrals')
 async def referrals_callback(callback: types.CallbackQuery):
     """Обработчик кнопки партнерской программы"""
+    try:
+        user_id = callback.from_user.id
+        overview = await get_referral_overview(user_id)
+        
+        # Отладочная информация
+        logger.info(f"Реферальная статистика для {user_id}: {overview}")
+        
+        # Дополнительная отладка
+        debug_data = await check_referral_data(user_id)
+        logger.info(f"Отладочные данные для {user_id}: {debug_data}")
+        
+        me = await bot.get_me()
+        bot_username = me.username or ""
+        link = f"https://t.me/{bot_username}?start={user_id}"
+
+        text = f"""
+🤝 <b>Партнёрская программа Shard VPN</b>
+
+🎁 <b>Ваша система вознаграждений:</b>
+🥇 За рефералов 1-й линии: 35%
+🥈 За рефералов 2-й линии: 10%
+🥉 За рефералов 3-й линии: 5%
+
+📊 <b>Статистика:</b>
+<b>Реферальный баланс:</b> {overview['balance']:.2f}₽
+<b>Рефералов за сегодня:</b>  {overview['today_first_line']}
+1-я линия: {overview['level1']}
+2-я линия: {overview['level2']}
+3-я линия: {overview['level3']}
+
+<b>Ваша реферальная ссылка:</b>
+<code>{link}</code>
+"""
+        
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="💰 Вывод средств", callback_data="referral_withdraw"), InlineKeyboardButton(text="📤 Поделиться", url=f"https://t.me/share/url?url={link}&text={quote('Присоединяйся к Shard VPN!')}")],
+            [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_profile")]
+        ])
+        
+        await callback.message.edit_text(text, reply_markup=keyboard)
+        await callback.answer()
+    except Exception as e:
+        logger.error(f"Ошибка referrals_callback: {e}")
+        await callback.answer("Ошибка", show_alert=True)
+
+@dp.callback_query(F.data == 'referral_withdraw')
+async def referral_withdraw_callback(callback: types.CallbackQuery):
+    """Обработчик кнопки вывода средств"""
     await callback.answer("Скоро", show_alert=True)
 
 
@@ -417,7 +529,7 @@ async def info(message: Message):
 
 <blockquote><i>📩 Вопросы? Напиши в поддержку — мы всегда на связи.</i></blockquote>""",
         reply_markup=InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/xmakedon")]
+            [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/Shardsupport_bot")]
         ])
     )
 
@@ -433,7 +545,7 @@ async def show_instructions_from_vpn(callback: types.CallbackQuery):
         InlineKeyboardButton(text="💻 Windows", callback_data='instruction_win'),
         InlineKeyboardButton(text="🍎 macOS", callback_data='instruction_mac')
         ],
-        [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/xmakedon")],
+        [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/Shardsupport_bot")],
         [InlineKeyboardButton(text="🔙 Назад", callback_data='back_to_vpn')]
     ])
     
@@ -475,7 +587,7 @@ async def show_instructions(callback: types.CallbackQuery):
         InlineKeyboardButton(text="💻 Windows", callback_data='instruction_win'),
         InlineKeyboardButton(text="🍎 macOS", callback_data='instruction_mac')
         ],
-        [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/xmakedon")],
+        [InlineKeyboardButton(text="🧑‍💻 Поддержка", url="https://t.me/Shardsupport_bot")],
         [InlineKeyboardButton(text="🔙 Назад", callback_data='back_to_vpn')]
     ])
     
@@ -731,8 +843,15 @@ async def successful_payment_handler(message: Message):
 ⏳Дата окончания: <b>{expiry_date}</b>
 
 <blockquote><i>🔹 Нажмите «Активировать VPN», чтобы начать пользоваться.</i></blockquote>""",
+            message_effect_id="5046509860389126442",
             reply_markup=create_main_keyboard()
         )
+        # Реферальные начисления
+        try:
+            amount_rub = calculate_amount_for_period(period_months)
+            await accrue_referral_commissions(user_id, amount_rub, method='stars', bot=bot)
+        except Exception as e:
+            logger.error(f"Ошибка начисления реферальных: {e}")
 async def send_notification(user_id: int, text: str, notification_type: str):
     """Отправляет уведомление пользователю"""
     try:
@@ -810,7 +929,7 @@ async def main():
                     if shutdown_event.is_set():
                         break
                     text = (
-                        f"❌ <b>Ваша подписка истёкла</b>\n\n"
+                        f"❌ <b>Ваша подписка истекла</b>\n\n"
                         f"<blockquote><i>Доступ завершён. Продлите подписку, чтобы продолжить пользоваться VPN.</i></blockquote>\n\n"
                         f"Дата окончания: <code>{expiry}</code>"
                     )

@@ -7838,3 +7838,1211 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: query
 2025-09-23 16:12:26,441 - aiogram.event - INFO - Update id=224569189 is handled. Duration 297 ms by bot id=8238763231
 2025-09-23 16:12:27,839 - aiogram.event - INFO - Update id=224569190 is handled. Duration 359 ms by bot id=8238763231
 2025-09-23 16:12:34,292 - aiogram.event - INFO - Update id=224569191 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 15:30:47,847 - aiogram.dispatcher - INFO - Start polling
+2025-09-26 15:30:48,099 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-26 15:30:48,183 - root - INFO - Добавлен новый пользователь бота: 5948932841 (Yeganeh)
+2025-09-26 15:30:48,188 - root - INFO - Пользователь 5948932841 (Yeganeh) добавлен в базу бота
+2025-09-26 15:30:48,193 - root - INFO - Добавлен новый пользователь бота: 777392690 (Eli)
+2025-09-26 15:30:48,197 - root - INFO - Пользователь 777392690 (Eli) добавлен в базу бота
+2025-09-26 15:30:48,208 - root - INFO - Обновлен пользователь бота: 777392690
+2025-09-26 15:30:48,208 - root - INFO - Пользователь 777392690 (Eli) добавлен в базу бота
+2025-09-26 15:30:48,417 - aiogram.event - INFO - Update id=224569279 is handled. Duration 234 ms by bot id=8238763231
+2025-09-26 15:30:48,421 - aiogram.event - INFO - Update id=224569281 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 15:30:48,464 - aiogram.event - INFO - Update id=224569280 is handled. Duration 280 ms by bot id=8238763231
+2025-09-26 15:31:12,893 - aiogram.event - INFO - Update id=224569282 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 15:31:14,438 - aiogram.event - INFO - Update id=224569283 is handled. Duration 264 ms by bot id=8238763231
+2025-09-26 15:31:30,456 - aiogram.event - INFO - Update id=224569284 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:31:32,043 - aiogram.event - INFO - Update id=224569285 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:31:37,131 - aiogram.event - INFO - Update id=224569286 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:31:39,339 - aiogram.event - INFO - Update id=224569287 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:31:40,731 - aiogram.event - INFO - Update id=224569288 is handled. Duration 156 ms by bot id=8238763231
+2025-09-26 15:31:43,450 - aiogram.event - INFO - Update id=224569289 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:31:51,503 - aiogram.event - INFO - Update id=224569290 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 15:31:52,473 - aiogram.event - INFO - Update id=224569291 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:31:53,461 - aiogram.event - INFO - Update id=224569292 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:31:54,402 - aiogram.event - INFO - Update id=224569293 is handled. Duration 62 ms by bot id=8238763231
+2025-09-26 15:31:55,466 - aiogram.event - INFO - Update id=224569294 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:31:56,495 - aiogram.event - INFO - Update id=224569295 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:31:57,483 - aiogram.event - INFO - Update id=224569296 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:31:58,461 - aiogram.event - INFO - Update id=224569297 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:31:59,511 - aiogram.event - INFO - Update id=224569298 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:32:01,000 - aiogram.event - INFO - Update id=224569299 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:32:02,001 - aiogram.event - INFO - Update id=224569300 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:32:05,799 - aiogram.event - INFO - Update id=224569301 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:32:09,105 - aiogram.event - INFO - Update id=224569302 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:32:12,085 - aiogram.event - INFO - Update id=224569303 is handled. Duration 234 ms by bot id=8238763231
+2025-09-26 15:32:14,113 - aiogram.event - INFO - Update id=224569304 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:33:15,510 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-26 15:33:15,516 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:33:15,522 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:33:15,779 - root - INFO - Админская подписка выдана пользователю 8272216832 на 14 дней. До 10.10.2025 15:33
+2025-09-26 15:33:15,857 - aiogram.event - INFO - Update id=224569305 is handled. Duration 359 ms by bot id=8238763231
+2025-09-26 15:33:19,885 - aiogram.event - INFO - Update id=224569306 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 15:40:30,801 - aiogram.dispatcher - INFO - Start polling
+2025-09-26 15:40:31,003 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-26 15:40:31,843 - aiogram.event - INFO - Update id=224569307 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:40:33,326 - aiogram.event - INFO - Update id=224569308 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:40:34,132 - aiogram.event - INFO - Update id=224569309 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:40:35,050 - aiogram.event - INFO - Update id=224569310 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:40:37,873 - aiogram.event - INFO - Update id=224569311 is handled. Duration 422 ms by bot id=8238763231
+2025-09-26 15:40:39,597 - aiogram.event - INFO - Update id=224569312 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:40:43,905 - aiogram.event - INFO - Update id=224569313 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:40:46,742 - aiogram.event - INFO - Update id=224569314 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 15:40:47,423 - aiogram.event - INFO - Update id=224569315 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:40:48,621 - aiogram.event - INFO - Update id=224569316 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:40:59,480 - aiogram.event - INFO - Update id=224569317 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:41:01,561 - aiogram.event - INFO - Update id=224569318 is handled. Duration 78 ms by bot id=8238763231
+2025-09-26 15:41:03,460 - aiogram.event - INFO - Update id=224569319 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:41:07,689 - aiogram.event - INFO - Update id=224569320 is handled. Duration 78 ms by bot id=8238763231
+2025-09-26 15:41:08,949 - aiogram.event - INFO - Update id=224569321 is handled. Duration 78 ms by bot id=8238763231
+2025-09-26 15:41:10,299 - aiogram.event - INFO - Update id=224569322 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:41:11,341 - aiogram.event - INFO - Update id=224569323 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:41:13,362 - aiogram.event - INFO - Update id=224569324 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:41:14,321 - aiogram.event - INFO - Update id=224569325 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 15:41:16,960 - aiogram.event - INFO - Update id=224569326 is handled. Duration 62 ms by bot id=8238763231
+2025-09-26 15:41:29,547 - aiogram.event - INFO - Update id=224569327 is handled. Duration 156 ms by bot id=8238763231
+2025-09-26 15:41:32,614 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-26 15:41:32,623 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:41:32,708 - aiogram.event - INFO - Update id=224569328 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:41:37,929 - aiogram.event - INFO - Update id=224569329 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:41:39,306 - aiogram.event - INFO - Update id=224569330 is handled. Duration 78 ms by bot id=8238763231
+2025-09-26 15:41:40,582 - aiogram.event - INFO - Update id=224569331 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:41:42,792 - aiogram.event - INFO - Update id=224569332 is handled. Duration 62 ms by bot id=8238763231
+2025-09-26 15:41:46,353 - aiogram.event - INFO - Update id=224569333 is handled. Duration 62 ms by bot id=8238763231
+2025-09-26 15:41:47,602 - aiogram.event - INFO - Update id=224569334 is handled. Duration 62 ms by bot id=8238763231
+2025-09-26 15:41:48,595 - aiogram.event - INFO - Update id=224569335 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:41:51,729 - aiogram.event - INFO - Update id=224569336 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 15:41:55,294 - root - INFO - Админская подписка выдана пользователю 8132904958 на 30 дней. До 26.10.2025 15:41
+2025-09-26 15:41:55,364 - aiogram.event - INFO - Update id=224569337 is handled. Duration 358 ms by bot id=8238763231
+2025-09-26 15:42:18,226 - aiogram.event - INFO - Update id=224569338 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:42:38,535 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:42:38,539 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:42:38,616 - aiogram.event - INFO - Update id=224569339 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:42:47,218 - aiogram.event - INFO - Update id=224569340 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:42:48,673 - aiogram.event - INFO - Update id=224569341 is handled. Duration 313 ms by bot id=8238763231
+2025-09-26 15:43:09,916 - aiogram.event - INFO - Update id=224569342 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:43:11,109 - aiogram.event - INFO - Update id=224569343 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:43:12,582 - aiogram.event - INFO - Update id=224569344 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 15:43:13,666 - aiogram.event - INFO - Update id=224569345 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 15:43:15,307 - aiogram.event - INFO - Update id=224569346 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:43:16,690 - aiogram.event - INFO - Update id=224569347 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:43:19,501 - aiogram.event - INFO - Update id=224569348 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 15:43:20,602 - root - INFO - Подписка пользователя 8132904958 деактивирована. Дата окончания установлена на 25.09.2025 15:43
+2025-09-26 15:43:20,725 - aiogram.event - INFO - Update id=224569349 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:43:28,643 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:43:28,649 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:43:28,768 - aiogram.event - INFO - Update id=224569350 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:43:41,898 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:43:41,907 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:43:41,974 - aiogram.event - INFO - Update id=224569351 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:43:44,280 - aiogram.event - INFO - Update id=224569352 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:43:46,258 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:43:46,259 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:43:46,344 - aiogram.event - INFO - Update id=224569353 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:43:48,868 - aiogram.event - INFO - Update id=224569354 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 15:45:03,082 - aiogram.dispatcher - INFO - Start polling
+2025-09-26 15:45:03,246 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-26 15:45:03,562 - aiogram.event - INFO - Update id=224569355 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 15:45:05,212 - aiogram.event - INFO - Update id=224569356 is handled. Duration 344 ms by bot id=8238763231
+2025-09-26 15:45:16,382 - aiogram.event - INFO - Update id=224569357 is handled. Duration 141 ms by bot id=8238763231
+2025-09-26 15:45:18,894 - aiogram.event - INFO - Update id=224569358 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:45:20,663 - aiogram.event - INFO - Update id=224569359 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:45:21,948 - aiogram.event - INFO - Update id=224569360 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:45:23,362 - aiogram.event - INFO - Update id=224569361 is handled. Duration 311 ms by bot id=8238763231
+2025-09-26 15:45:25,128 - aiogram.event - INFO - Update id=224569362 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:45:39,652 - aiogram.event - INFO - Update id=224569363 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:45:40,868 - aiogram.event - INFO - Update id=224569364 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:45:44,841 - aiogram.event - INFO - Update id=224569365 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:45:46,059 - aiogram.event - INFO - Update id=224569366 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:45:51,461 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-26 15:45:51,467 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:45:51,473 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:45:51,738 - root - INFO - Админская подписка выдана пользователю 8272216832 на 14 дней. До 10.10.2025 15:45
+2025-09-26 15:45:51,837 - aiogram.event - INFO - Update id=224569367 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 15:45:54,608 - aiogram.event - INFO - Update id=224569368 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 15:45:56,228 - aiogram.event - INFO - Update id=224569369 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 15:45:57,884 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:45:57,893 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:45:58,016 - aiogram.event - INFO - Update id=224569370 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:46:04,363 - aiogram.event - INFO - Update id=224569371 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:46:07,660 - aiogram.event - INFO - Update id=224569372 is handled. Duration 280 ms by bot id=8238763231
+2025-09-26 15:46:10,351 - aiogram.event - INFO - Update id=224569373 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 15:46:20,974 - aiogram.event - INFO - Update id=224569374 is handled. Duration 452 ms by bot id=8238763231
+2025-09-26 15:46:22,754 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:46:22,764 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:46:22,920 - aiogram.event - INFO - Update id=224569375 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 15:46:25,308 - aiogram.event - INFO - Update id=224569376 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:46:26,534 - aiogram.event - INFO - Update id=224569377 is handled. Duration 312 ms by bot id=8238763231
+2025-09-26 15:46:44,357 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-26 15:46:44,366 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:46:44,376 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:46:44,386 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:46:44,476 - aiogram.event - INFO - Update id=224569378 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:46:47,204 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:46:47,210 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:46:47,286 - aiogram.event - INFO - Update id=224569379 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:46:48,247 - aiogram.event - INFO - Update id=224569380 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:46:49,699 - aiogram.event - INFO - Update id=224569381 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:46:57,428 - aiogram.event - INFO - Update id=224569382 is handled. Duration 156 ms by bot id=8238763231
+2025-09-26 15:46:58,779 - aiogram.event - INFO - Update id=224569383 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 15:47:50,843 - aiogram.event - INFO - Update id=224569384 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 15:47:52,476 - aiogram.event - INFO - Update id=224569385 is handled. Duration 265 ms by bot id=8238763231
+2025-09-26 15:48:33,285 - aiogram.event - INFO - Update id=224569386 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:48:41,695 - aiogram.event - INFO - Update id=224569387 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:48:43,012 - aiogram.event - INFO - Update id=224569388 is handled. Duration 266 ms by bot id=8238763231
+2025-09-26 15:48:47,974 - aiogram.event - INFO - Update id=224569389 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:48:48,798 - aiogram.event - INFO - Update id=224569390 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:50:21,390 - root - INFO - Добавлен новый пользователь бота: 6115695618 (Antak)
+2025-09-26 15:50:21,395 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:50:21,399 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:50:21,405 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:50:21,557 - aiogram.event - INFO - Update id=224569391 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 15:50:30,428 - aiogram.event - INFO - Update id=224569392 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:50:31,865 - aiogram.event - INFO - Update id=224569393 is handled. Duration 265 ms by bot id=8238763231
+2025-09-26 15:50:41,002 - aiogram.event - INFO - Update id=224569394 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:50:42,818 - aiogram.event - INFO - Update id=224569395 is handled. Duration 265 ms by bot id=8238763231
+2025-09-26 15:51:07,491 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:51:07,500 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:51:07,583 - aiogram.event - INFO - Update id=224569396 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:51:15,138 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:51:15,140 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:51:15,319 - aiogram.event - INFO - Update id=224569397 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:51:18,807 - aiogram.event - INFO - Update id=224569398 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:51:48,918 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:51:48,946 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:51:48,951 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:51:49,219 - root - INFO - Админская подписка выдана пользователю 6115695618 на 14 дней. До 10.10.2025 15:51
+2025-09-26 15:51:49,304 - aiogram.event - INFO - Update id=224569399 is handled. Duration 391 ms by bot id=8238763231
+2025-09-26 15:51:49,697 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:51:49,699 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:51:49,829 - aiogram.event - INFO - Update id=224569400 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:51:57,889 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:51:57,893 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:51:57,966 - aiogram.event - INFO - Update id=224569401 is handled. Duration 93 ms by bot id=8238763231
+2025-09-26 15:52:07,627 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:52:07,636 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:52:07,719 - aiogram.event - INFO - Update id=224569402 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:52:11,466 - aiogram.event - INFO - Update id=224569403 is handled. Duration 312 ms by bot id=8238763231
+2025-09-26 15:53:00,107 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 15:53:00,111 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 15:53:00,212 - aiogram.event - INFO - Update id=224569404 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 15:53:03,485 - aiogram.event - INFO - Update id=224569405 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:53:04,853 - aiogram.event - INFO - Update id=224569406 is handled. Duration 187 ms by bot id=8238763231
+2025-09-26 15:53:33,549 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:53:33,554 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:53:33,698 - aiogram.event - INFO - Update id=224569407 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:54:55,957 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 15:54:55,962 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 15:54:56,039 - aiogram.event - INFO - Update id=224569408 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:55:22,070 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:55:22,079 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:55:22,197 - aiogram.event - INFO - Update id=224569409 is handled. Duration 140 ms by bot id=8238763231
+2025-09-26 15:55:23,575 - aiogram.event - INFO - Update id=224569410 is handled. Duration 280 ms by bot id=8238763231
+2025-09-26 15:55:26,960 - aiogram.event - INFO - Update id=224569411 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 15:55:28,909 - aiogram.event - INFO - Update id=224569412 is handled. Duration 891 ms by bot id=8238763231
+2025-09-26 15:55:50,012 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 15:55:50,012 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 15:55:50,125 - aiogram.event - INFO - Update id=224569413 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 15:55:51,691 - aiogram.event - INFO - Update id=224569414 is handled. Duration 327 ms by bot id=8238763231
+2025-09-26 15:57:00,370 - aiogram.event - INFO - Update id=224569415 is handled. Duration 0 ms by bot id=8238763231
+2025-09-26 15:57:10,123 - aiogram.event - INFO - Update id=224569416 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 15:57:13,015 - aiogram.event - INFO - Update id=224569417 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 15:57:15,178 - aiogram.event - INFO - Update id=224569418 is handled. Duration 63 ms by bot id=8238763231
+2025-09-26 15:57:16,772 - aiogram.event - INFO - Update id=224569419 is handled. Duration 61 ms by bot id=8238763231
+2025-09-26 15:57:19,794 - aiogram.event - INFO - Update id=224569420 is handled. Duration 266 ms by bot id=8238763231
+2025-09-26 15:57:22,283 - aiogram.event - INFO - Update id=224569421 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 15:58:03,659 - aiogram.event - INFO - Update id=224569422 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 15:58:05,449 - aiogram.event - INFO - Update id=224569423 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 15:58:32,807 - aiogram.event - INFO - Update id=224569424 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 15:58:34,340 - aiogram.event - INFO - Update id=224569425 is handled. Duration 327 ms by bot id=8238763231
+2025-09-26 15:58:50,453 - aiogram.event - INFO - Update id=224569426 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 15:58:52,397 - aiogram.event - INFO - Update id=224569427 is handled. Duration 358 ms by bot id=8238763231
+2025-09-26 15:59:10,919 - aiogram.event - INFO - Update id=224569428 is handled. Duration 79 ms by bot id=8238763231
+2025-09-26 15:59:12,207 - aiogram.event - INFO - Update id=224569429 is handled. Duration 141 ms by bot id=8238763231
+2025-09-26 16:00:51,843 - aiogram.event - INFO - Update id=224569430 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 16:00:53,090 - aiogram.event - INFO - Update id=224569431 is handled. Duration 235 ms by bot id=8238763231
+2025-09-26 16:01:25,160 - root - INFO - Добавлен новый пользователь бота: 6115695618 (Antak)
+2025-09-26 16:01:25,169 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 16:01:25,174 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 16:01:25,180 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 16:01:25,328 - aiogram.event - INFO - Update id=224569432 is handled. Duration 188 ms by bot id=8238763231
+2025-09-26 16:01:26,990 - aiogram.event - INFO - Update id=224569433 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 16:01:29,614 - aiogram.event - INFO - Update id=224569434 is handled. Duration 405 ms by bot id=8238763231
+2025-09-26 16:01:30,545 - aiogram.event - INFO - Update id=224569435 is handled. Duration 188 ms by bot id=8238763231
+2025-09-26 16:01:32,235 - aiogram.event - INFO - Update id=224569436 is handled. Duration 61 ms by bot id=8238763231
+2025-09-26 16:01:32,614 - root - INFO - Подписка успешно добавлена для пользователя 6115695618 на 0 мес. До 03.10.2025 16:01
+2025-09-26 16:01:32,748 - aiogram.event - INFO - Update id=224569437 is handled. Duration 422 ms by bot id=8238763231
+2025-09-26 16:03:13,416 - aiogram.event - INFO - Update id=224569438 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:03:15,241 - aiogram.event - INFO - Update id=224569439 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:03:41,073 - aiogram.event - INFO - Update id=224569440 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 16:03:47,378 - aiogram.event - INFO - Update id=224569441 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 16:03:49,068 - aiogram.event - INFO - Update id=224569442 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 16:03:50,119 - aiogram.event - INFO - Update id=224569443 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 16:04:54,331 - aiogram.event - INFO - Update id=224569444 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:04:56,425 - aiogram.event - INFO - Update id=224569445 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:04:57,820 - aiogram.event - INFO - Update id=224569446 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:04:58,927 - aiogram.event - INFO - Update id=224569447 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:05:00,661 - aiogram.event - INFO - Update id=224569448 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 16:05:01,686 - aiogram.event - INFO - Update id=224569449 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 16:05:02,744 - aiogram.event - INFO - Update id=224569450 is handled. Duration 141 ms by bot id=8238763231
+2025-09-26 16:05:14,931 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-26 16:05:14,937 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 16:05:15,154 - aiogram.event - INFO - Update id=224569451 is handled. Duration 233 ms by bot id=8238763231
+2025-09-26 16:05:18,726 - aiogram.event - INFO - Update id=224569452 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:05:20,256 - aiogram.event - INFO - Update id=224569453 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:05:33,534 - root - WARNING - Платеж 3068a0f8-000f-5001-8000-179cd9c32b50 не завершился в течение 10 минут
+2025-09-26 16:06:49,000 - aiogram.event - INFO - Update id=224569454 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:06:50,871 - aiogram.event - INFO - Update id=224569455 is handled. Duration 202 ms by bot id=8238763231
+2025-09-26 16:09:09,527 - aiogram.event - INFO - Update id=224569456 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:09:11,214 - aiogram.event - INFO - Update id=224569457 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:09:12,272 - aiogram.event - INFO - Update id=224569458 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:09:13,391 - aiogram.event - INFO - Update id=224569459 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 16:09:32,998 - aiogram.event - INFO - Update id=224569460 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:09:34,748 - aiogram.event - INFO - Update id=224569461 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:09:37,257 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-26 16:09:37,263 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 16:09:37,395 - aiogram.event - INFO - Update id=224569462 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 16:09:38,586 - aiogram.event - INFO - Update id=224569463 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 16:09:40,302 - aiogram.event - INFO - Update id=224569464 is handled. Duration 79 ms by bot id=8238763231
+2025-09-26 16:09:44,457 - aiogram.event - INFO - Update id=224569465 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:09:45,832 - aiogram.event - INFO - Update id=224569466 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:10:00,186 - aiogram.dispatcher - INFO - Start polling
+2025-09-26 16:10:00,353 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-26 16:10:04,417 - aiogram.event - INFO - Update id=224569467 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:10:08,916 - aiogram.event - INFO - Update id=224569468 is handled. Duration 188 ms by bot id=8238763231
+2025-09-26 16:10:10,067 - aiogram.event - INFO - Update id=224569469 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 16:10:11,275 - aiogram.event - INFO - Update id=224569470 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 16:10:30,280 - aiogram.event - INFO - Update id=224569471 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 16:10:31,330 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-26 16:10:31,376 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 16:10:31,469 - aiogram.event - INFO - Update id=224569472 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 16:10:33,204 - aiogram.event - INFO - Update id=224569473 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:10:40,528 - aiogram.event - INFO - Update id=224569474 is handled. Duration 217 ms by bot id=8238763231
+2025-09-26 16:10:42,417 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 16:10:42,417 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 16:10:42,499 - aiogram.event - INFO - Update id=224569475 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:10:44,996 - aiogram.event - INFO - Update id=224569476 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 16:10:46,544 - aiogram.event - INFO - Update id=224569477 is handled. Duration 233 ms by bot id=8238763231
+2025-09-26 16:11:09,505 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-26 16:11:09,510 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 16:11:09,514 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 16:11:09,521 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 16:11:09,613 - aiogram.event - INFO - Update id=224569478 is handled. Duration 108 ms by bot id=8238763231
+2025-09-26 16:11:13,929 - aiogram.event - INFO - Update id=224569479 is handled. Duration 79 ms by bot id=8238763231
+2025-09-26 16:11:15,257 - aiogram.event - INFO - Update id=224569480 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 16:11:30,504 - aiogram.event - INFO - Update id=224569481 is handled. Duration 188 ms by bot id=8238763231
+2025-09-26 16:11:32,093 - aiogram.event - INFO - Update id=224569482 is handled. Duration 452 ms by bot id=8238763231
+2025-09-26 16:11:58,430 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 16:11:58,435 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-26 16:11:58,522 - aiogram.event - INFO - Update id=224569483 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:12:00,143 - aiogram.event - INFO - Update id=224569484 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:12:01,645 - aiogram.event - INFO - Update id=224569485 is handled. Duration 327 ms by bot id=8238763231
+2025-09-26 16:12:11,568 - aiogram.event - INFO - Update id=224569486 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 16:12:12,982 - aiogram.event - INFO - Update id=224569487 is handled. Duration 358 ms by bot id=8238763231
+2025-09-26 16:13:00,757 - root - INFO - Добавлен новый пользователь бота: 6115695618 (Antak)
+2025-09-26 16:13:00,762 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 16:13:00,766 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 16:13:00,773 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-26 16:13:00,981 - aiogram.event - INFO - Update id=224569488 is handled. Duration 217 ms by bot id=8238763231
+2025-09-26 16:13:02,199 - aiogram.event - INFO - Update id=224569489 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:13:06,122 - aiogram.event - INFO - Update id=224569490 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 16:13:07,335 - aiogram.event - INFO - Update id=224569491 is handled. Duration 188 ms by bot id=8238763231
+2025-09-26 16:13:07,674 - aiogram.event - INFO - Update id=224569492 is handled. Duration 79 ms by bot id=8238763231
+2025-09-26 16:13:08,864 - aiogram.event - INFO - Update id=224569493 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:13:09,039 - aiogram.event - INFO - Update id=224569494 is handled. Duration 47 ms by bot id=8238763231
+2025-09-26 16:13:09,370 - root - INFO - Подписка успешно добавлена для пользователя 6115695618 на 0 мес. До 03.10.2025 16:13
+2025-09-26 16:13:09,473 - aiogram.event - INFO - Update id=224569495 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 16:13:12,475 - root - INFO - Обновлен пользователь бота: 6115695618
+2025-09-26 16:13:12,481 - root - INFO - Пользователь 6115695618 (Antak) добавлен в базу бота
+2025-09-26 16:13:12,681 - aiogram.event - INFO - Update id=224569496 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:13:15,100 - aiogram.event - INFO - Update id=224569497 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:13:16,180 - aiogram.event - INFO - Update id=224569498 is handled. Duration 250 ms by bot id=8238763231
+2025-09-26 16:14:03,930 - aiogram.event - INFO - Update id=224569499 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:14:07,465 - aiogram.event - INFO - Update id=224569500 is handled. Duration 391 ms by bot id=8238763231
+2025-09-26 16:14:09,053 - aiogram.event - INFO - Update id=224569501 is handled. Duration 157 ms by bot id=8238763231
+2025-09-26 16:14:11,149 - aiogram.event - INFO - Update id=224569502 is handled. Duration 61 ms by bot id=8238763231
+2025-09-26 16:14:11,530 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 03.10.2025 16:14
+2025-09-26 16:14:11,613 - aiogram.event - INFO - Update id=224569503 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 16:14:47,664 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-149' coro=<check_payment_status() done, defined at C:\shard vpn\payment.py:98> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\shard vpn\bot.py", line 934, in <module>
+    try:
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 600, in run_forever
+    self._run_once()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1896, in _run_once
+    handle._run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\shard vpn\payment.py", line 110, in check_payment_status
+    payment = Payment.find_one(payment_id)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\payment.py", line 35, in find_one
+    response = instance.client.request(HttpVerb.GET, path)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 54, in request
+    raw_response = self.execute(body, method, path, query_params, request_headers)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\yookassa\client.py", line 77, in execute
+    raw_response = session.request(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1274, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1130, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+2025-09-26 16:14:56,233 - aiogram.dispatcher - INFO - Start polling
+2025-09-26 16:14:56,393 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-26 16:15:07,546 - aiogram.event - INFO - Update id=224569504 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:15:10,194 - aiogram.event - INFO - Update id=224569505 is handled. Duration 186 ms by bot id=8238763231
+2025-09-26 16:15:11,598 - aiogram.event - INFO - Update id=224569506 is handled. Duration 92 ms by bot id=8238763231
+2025-09-26 16:15:16,960 - aiogram.event - INFO - Update id=224569507 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:15:18,769 - aiogram.event - INFO - Update id=224569508 is handled. Duration 217 ms by bot id=8238763231
+2025-09-26 16:15:21,481 - aiogram.event - INFO - Update id=224569509 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 16:15:22,611 - aiogram.event - INFO - Update id=224569510 is handled. Duration 77 ms by bot id=8238763231
+2025-09-26 16:15:31,930 - aiogram.event - INFO - Update id=224569511 is handled. Duration 110 ms by bot id=8238763231
+2025-09-26 16:15:33,956 - aiogram.event - INFO - Update id=224569512 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:15:35,964 - aiogram.event - INFO - Update id=224569513 is handled. Duration 438 ms by bot id=8238763231
+2025-09-26 16:15:39,823 - aiogram.event - INFO - Update id=224569514 is handled. Duration 264 ms by bot id=8238763231
+2025-09-26 16:15:44,407 - aiogram.event - INFO - Update id=224569515 is handled. Duration 155 ms by bot id=8238763231
+2025-09-26 16:15:44,483 - root - INFO - Пользователь 8272216832 добавлен в bot_users при оплате
+2025-09-26 16:15:44,731 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 03.10.2025 16:15
+2025-09-26 16:15:44,918 - aiogram.event - INFO - Update id=224569516 is handled. Duration 438 ms by bot id=8238763231
+2025-09-26 16:16:42,528 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-26 16:16:42,540 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-26 16:16:42,643 - aiogram.event - INFO - Update id=224569517 is handled. Duration 125 ms by bot id=8238763231
+2025-09-26 16:16:43,598 - aiogram.event - INFO - Update id=224569518 is handled. Duration 139 ms by bot id=8238763231
+2025-09-26 16:16:44,858 - aiogram.event - INFO - Update id=224569519 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:25:40,332 - root - WARNING - Платеж 3068a5af-000f-5000-b000-141de968fa4b не завершился в течение 10 минут
+2025-09-26 16:30:37,552 - aiogram.event - INFO - Update id=224569520 is handled. Duration 109 ms by bot id=8238763231
+2025-09-26 16:30:39,366 - aiogram.event - INFO - Update id=224569521 is handled. Duration 375 ms by bot id=8238763231
+2025-09-26 16:30:41,741 - aiogram.event - INFO - Update id=224569522 is handled. Duration 233 ms by bot id=8238763231
+2025-09-26 16:30:42,859 - aiogram.event - INFO - Update id=224569523 is handled. Duration 358 ms by bot id=8238763231
+2025-09-26 16:30:44,962 - aiogram.event - INFO - Update id=224569524 is handled. Duration 359 ms by bot id=8238763231
+2025-09-26 16:30:46,038 - aiogram.event - INFO - Update id=224569525 is handled. Duration 344 ms by bot id=8238763231
+2025-09-26 16:30:47,355 - aiogram.event - INFO - Update id=224569526 is handled. Duration 78 ms by bot id=8238763231
+2025-09-26 16:30:49,075 - aiogram.event - INFO - Update id=224569527 is handled. Duration 344 ms by bot id=8238763231
+2025-09-26 16:31:04,824 - aiogram.event - INFO - Update id=224569528 is handled. Duration 172 ms by bot id=8238763231
+2025-09-26 16:31:05,894 - aiogram.event - INFO - Update id=224569529 is handled. Duration 280 ms by bot id=8238763231
+2025-09-26 16:31:07,659 - aiogram.event - INFO - Update id=224569530 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:31:28,410 - aiogram.event - INFO - Update id=224569531 is handled. Duration 94 ms by bot id=8238763231
+2025-09-26 16:31:31,904 - aiogram.event - INFO - Update id=224569532 is handled. Duration 219 ms by bot id=8238763231
+2025-09-26 16:31:35,376 - aiogram.event - INFO - Update id=224569533 is handled. Duration 157 ms by bot id=8238763231
+2025-09-26 16:31:36,632 - aiogram.event - INFO - Update id=224569534 is handled. Duration 313 ms by bot id=8238763231
+2025-09-27 22:06:12,997 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 22:06:13,226 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 22:06:25,718 - aiogram.event - INFO - Update id=224569537 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 22:06:28,379 - aiogram.event - INFO - Update id=224569538 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 22:07:27,931 - aiogram.event - INFO - Update id=224569539 is handled. Duration 140 ms by bot id=8238763231
+2025-09-27 22:07:29,376 - aiogram.event - INFO - Update id=224569540 is handled. Duration 265 ms by bot id=8238763231
+2025-09-27 22:07:51,076 - aiogram.event - INFO - Update id=224569541 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:07:53,415 - aiogram.event - INFO - Update id=224569542 is handled. Duration 172 ms by bot id=8238763231
+2025-09-27 22:08:02,975 - aiogram.event - INFO - Update id=224569543 is handled. Duration 93 ms by bot id=8238763231
+2025-09-27 22:08:04,548 - aiogram.event - INFO - Update id=224569544 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 22:08:05,758 - aiogram.event - INFO - Update id=224569545 is handled. Duration 156 ms by bot id=8238763231
+2025-09-27 22:08:06,846 - aiogram.event - INFO - Update id=224569546 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:08:07,926 - aiogram.event - INFO - Update id=224569547 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 22:08:09,050 - aiogram.event - INFO - Update id=224569548 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:08:11,358 - aiogram.event - INFO - Update id=224569549 is handled. Duration 109 ms by bot id=8238763231
+2025-09-27 22:08:12,777 - aiogram.event - INFO - Update id=224569550 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 22:08:15,458 - aiogram.event - INFO - Update id=224569551 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 22:09:42,634 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-27 22:09:42,639 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-27 22:09:42,735 - aiogram.event - INFO - Update id=224569552 is handled. Duration 109 ms by bot id=8238763231
+2025-09-27 22:09:43,696 - aiogram.event - INFO - Update id=224569553 is handled. Duration 109 ms by bot id=8238763231
+2025-09-27 22:09:44,951 - aiogram.event - INFO - Update id=224569554 is handled. Duration 280 ms by bot id=8238763231
+2025-09-27 22:10:08,708 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-27 22:10:08,716 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-27 22:10:08,722 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-27 22:10:08,729 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:10:08,823 - aiogram.event - INFO - Update id=224569555 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 22:10:11,835 - aiogram.event - INFO - Update id=224569556 is handled. Duration 93 ms by bot id=8238763231
+2025-09-27 22:10:14,126 - aiogram.event - INFO - Update id=224569557 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:10:21,675 - aiogram.event - INFO - Update id=224569558 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 22:10:34,799 - aiogram.event - INFO - Update id=224569559 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 22:10:51,801 - aiogram.event - INFO - Update id=224569560 is handled. Duration 157 ms by bot id=8238763231
+2025-09-27 22:10:53,628 - aiogram.event - INFO - Update id=224569561 is handled. Duration 437 ms by bot id=8238763231
+2025-09-27 22:10:54,953 - aiogram.event - INFO - Update id=224569562 is handled. Duration 202 ms by bot id=8238763231
+2025-09-27 22:10:56,951 - aiogram.event - INFO - Update id=224569563 is handled. Duration 62 ms by bot id=8238763231
+2025-09-27 22:10:57,327 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 04.10.2025 22:10
+2025-09-27 22:10:57,463 - aiogram.event - INFO - Update id=224569564 is handled. Duration 437 ms by bot id=8238763231
+2025-09-27 22:11:06,323 - aiogram.event - INFO - Update id=224569565 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 22:11:10,406 - aiogram.event - INFO - Update id=224569566 is handled. Duration 391 ms by bot id=8238763231
+2025-09-27 22:11:23,511 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:11:23,520 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-27 22:11:23,598 - aiogram.event - INFO - Update id=224569567 is handled. Duration 93 ms by bot id=8238763231
+2025-09-27 22:11:24,652 - aiogram.event - INFO - Update id=224569568 is handled. Duration 108 ms by bot id=8238763231
+2025-09-27 22:11:26,206 - aiogram.event - INFO - Update id=224569569 is handled. Duration 265 ms by bot id=8238763231
+2025-09-27 22:13:03,168 - aiogram.event - INFO - Update id=224569570 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 22:13:04,688 - aiogram.event - INFO - Update id=224569571 is handled. Duration 327 ms by bot id=8238763231
+2025-09-27 22:13:06,356 - aiogram.event - INFO - Update id=224569572 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 22:13:07,465 - aiogram.event - INFO - Update id=224569573 is handled. Duration 93 ms by bot id=8238763231
+2025-09-27 22:13:10,913 - aiogram.event - INFO - Update id=224569574 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:13:17,202 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-27 22:13:17,208 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-27 22:13:17,296 - aiogram.event - INFO - Update id=224569575 is handled. Duration 109 ms by bot id=8238763231
+2025-09-27 22:13:31,459 - aiogram.event - INFO - Update id=224569576 is handled. Duration 62 ms by bot id=8238763231
+2025-09-27 22:13:32,651 - aiogram.event - INFO - Update id=224569577 is handled. Duration 202 ms by bot id=8238763231
+2025-09-27 22:13:43,320 - aiogram.event - INFO - Update id=224569578 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 22:13:44,508 - aiogram.event - INFO - Update id=224569579 is handled. Duration 187 ms by bot id=8238763231
+2025-09-27 22:13:55,729 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:13:55,734 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-27 22:13:55,738 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:13:55,744 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-27 22:13:55,852 - aiogram.event - INFO - Update id=224569580 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 22:13:57,229 - aiogram.event - INFO - Update id=224569581 is handled. Duration 202 ms by bot id=8238763231
+2025-09-27 22:13:58,334 - aiogram.event - INFO - Update id=224569582 is handled. Duration 172 ms by bot id=8238763231
+2025-09-27 22:14:15,562 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:14:15,568 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-27 22:14:15,658 - aiogram.event - INFO - Update id=224569583 is handled. Duration 108 ms by bot id=8238763231
+2025-09-27 22:14:16,686 - aiogram.event - INFO - Update id=224569584 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 22:14:18,323 - aiogram.event - INFO - Update id=224569585 is handled. Duration 375 ms by bot id=8238763231
+2025-09-27 22:20:58,231 - root - WARNING - Платеж 306a4a72-000f-5001-8000-1a6fe75eeb02 не завершился в течение 10 минут
+2025-09-27 22:40:24,724 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-27 22:40:24,735 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-27 22:40:24,954 - aiogram.event - INFO - Update id=224569586 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 22:40:26,115 - aiogram.event - INFO - Update id=224569587 is handled. Duration 108 ms by bot id=8238763231
+2025-09-27 22:40:27,972 - aiogram.event - INFO - Update id=224569588 is handled. Duration 295 ms by bot id=8238763231
+2025-09-27 22:43:41,158 - aiogram.event - INFO - Update id=224569589 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 22:44:58,786 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 22:44:59,019 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 22:45:08,797 - aiogram.event - INFO - Update id=224569590 is handled. Duration 266 ms by bot id=8238763231
+2025-09-27 22:45:10,991 - aiogram.event - INFO - Update id=224569591 is handled. Duration 233 ms by bot id=8238763231
+2025-09-27 22:45:16,415 - aiogram.event - INFO - Update id=224569592 is handled. Duration 141 ms by bot id=8238763231
+2025-09-27 22:45:17,851 - aiogram.event - INFO - Update id=224569593 is handled. Duration 327 ms by bot id=8238763231
+2025-09-27 23:09:33,061 - aiogram.event - INFO - Update id=224569594 is handled. Duration 15 ms by bot id=8238763231
+2025-09-27 23:10:09,643 - aiogram.event - INFO - Update id=224569595 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 23:10:10,772 - aiogram.event - INFO - Update id=224569596 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 23:10:11,727 - aiogram.event - INFO - Update id=224569597 is handled. Duration 234 ms by bot id=8238763231
+2025-09-27 23:10:13,198 - aiogram.event - INFO - Update id=224569598 is handled. Duration 390 ms by bot id=8238763231
+2025-09-27 23:10:15,203 - aiogram.event - INFO - Update id=224569599 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 23:10:20,196 - aiogram.event - INFO - Update id=224569600 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 23:10:25,222 - aiogram.event - INFO - Update id=224569601 is handled. Duration 140 ms by bot id=8238763231
+2025-09-27 23:10:26,553 - aiogram.event - INFO - Update id=224569602 is handled. Duration 188 ms by bot id=8238763231
+2025-09-27 23:10:27,920 - aiogram.event - INFO - Update id=224569603 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 23:10:34,016 - aiogram.event - INFO - Update id=224569604 is handled. Duration 421 ms by bot id=8238763231
+2025-09-27 23:10:36,158 - aiogram.event - INFO - Update id=224569605 is handled. Duration 203 ms by bot id=8238763231
+2025-09-27 23:10:38,151 - aiogram.event - INFO - Update id=224569606 is handled. Duration 342 ms by bot id=8238763231
+2025-09-27 23:11:24,661 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:11:24,851 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:11:26,852 - aiogram.event - INFO - Update id=224569607 is handled. Duration 265 ms by bot id=8238763231
+2025-09-27 23:11:27,963 - aiogram.event - INFO - Update id=224569608 is handled. Duration 296 ms by bot id=8238763231
+2025-09-27 23:11:31,277 - aiogram.event - INFO - Update id=224569609 is handled. Duration 155 ms by bot id=8238763231
+2025-09-27 23:11:34,042 - aiogram.event - INFO - Update id=224569610 is handled. Duration 375 ms by bot id=8238763231
+2025-09-27 23:12:23,137 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:12:23,303 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:12:23,601 - aiogram.event - INFO - Update id=224569611 is handled. Duration 217 ms by bot id=8238763231
+2025-09-27 23:12:24,740 - aiogram.event - INFO - Update id=224569612 is handled. Duration 219 ms by bot id=8238763231
+2025-09-27 23:13:49,671 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:13:49,856 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:13:51,331 - aiogram.event - INFO - Update id=224569613 is handled. Duration 219 ms by bot id=8238763231
+2025-09-27 23:13:54,514 - aiogram.event - INFO - Update id=224569614 is handled. Duration 250 ms by bot id=8238763231
+2025-09-27 23:14:37,204 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:14:37,406 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:14:40,347 - aiogram.event - INFO - Update id=224569615 is handled. Duration 234 ms by bot id=8238763231
+2025-09-27 23:14:42,126 - aiogram.event - INFO - Update id=224569616 is handled. Duration 453 ms by bot id=8238763231
+2025-09-27 23:14:55,328 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:14:55,565 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:14:56,198 - aiogram.event - INFO - Update id=224569617 is handled. Duration 172 ms by bot id=8238763231
+2025-09-27 23:14:57,379 - aiogram.event - INFO - Update id=224569618 is handled. Duration 282 ms by bot id=8238763231
+2025-09-27 23:17:49,592 - aiogram.event - INFO - Update id=224569619 is handled. Duration 171 ms by bot id=8238763231
+2025-09-27 23:17:51,070 - aiogram.event - INFO - Update id=224569620 is handled. Duration 234 ms by bot id=8238763231
+2025-09-27 23:17:51,693 - aiogram.event - INFO - Update id=224569621 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 23:18:22,597 - aiogram.event - INFO - Update id=224569622 is handled. Duration 61 ms by bot id=8238763231
+2025-09-27 23:18:32,601 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 64] Указанное сетевое имя более недоступно
+2025-09-27 23:18:32,601 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8238763231)
+2025-09-27 23:18:43,645 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8238763231)
+2025-09-27 23:18:48,500 - aiogram.event - INFO - Update id=224569623 is handled. Duration 282 ms by bot id=8238763231
+2025-09-27 23:18:50,801 - aiogram.event - INFO - Update id=224569624 is handled. Duration 328 ms by bot id=8238763231
+2025-09-27 23:18:52,525 - aiogram.event - INFO - Update id=224569625 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 23:18:53,497 - aiogram.event - INFO - Update id=224569626 is handled. Duration 186 ms by bot id=8238763231
+2025-09-27 23:18:54,295 - aiogram.event - INFO - Update id=224569627 is handled. Duration 265 ms by bot id=8238763231
+2025-09-27 23:18:55,474 - aiogram.event - INFO - Update id=224569628 is handled. Duration 92 ms by bot id=8238763231
+2025-09-27 23:23:59,266 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:23:59,461 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:23:59,996 - aiogram.event - INFO - Update id=224569629 is handled. Duration 186 ms by bot id=8238763231
+2025-09-27 23:24:01,769 - aiogram.event - INFO - Update id=224569630 is handled. Duration 202 ms by bot id=8238763231
+2025-09-27 23:24:12,677 - aiogram.event - INFO - Update id=224569631 is handled. Duration 157 ms by bot id=8238763231
+2025-09-27 23:24:13,754 - aiogram.event - INFO - Update id=224569632 is handled. Duration 235 ms by bot id=8238763231
+2025-09-27 23:24:14,862 - aiogram.event - INFO - Update id=224569633 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 23:24:19,635 - aiogram.event - INFO - Update id=224569634 is handled. Duration 63 ms by bot id=8238763231
+2025-09-27 23:24:38,966 - aiogram.dispatcher - INFO - Start polling
+2025-09-27 23:24:39,107 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-27 23:26:49,624 - aiogram.event - INFO - Update id=224569635 is handled. Duration 16 ms by bot id=8238763231
+2025-09-27 23:26:56,348 - aiogram.event - INFO - Update id=224569636 is handled. Duration 217 ms by bot id=8238763231
+2025-09-27 23:27:04,984 - aiogram.event - INFO - Update id=224569637 is handled. Duration 140 ms by bot id=8238763231
+2025-09-27 23:27:06,756 - aiogram.event - INFO - Update id=224569638 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 23:27:17,453 - aiogram.event - INFO - Update id=224569639 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 23:27:21,138 - aiogram.event - INFO - Update id=224569640 is handled. Duration 92 ms by bot id=8238763231
+2025-09-27 23:27:23,082 - aiogram.event - INFO - Update id=224569641 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 23:27:25,152 - aiogram.event - INFO - Update id=224569642 is handled. Duration 125 ms by bot id=8238763231
+2025-09-27 23:27:26,045 - root - ERROR - Ошибка получения графика активности: unsupported format string passed to NoneType.__format__
+2025-09-27 23:27:26,108 - aiogram.event - INFO - Update id=224569643 is handled. Duration 94 ms by bot id=8238763231
+2025-09-27 23:27:28,341 - aiogram.event - INFO - Update id=224569644 is handled. Duration 77 ms by bot id=8238763231
+2025-09-27 23:27:30,904 - aiogram.event - INFO - Update id=224569645 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 23:27:32,007 - aiogram.event - INFO - Update id=224569646 is handled. Duration 141 ms by bot id=8238763231
+2025-09-27 23:27:32,847 - aiogram.event - INFO - Update id=224569647 is handled. Duration 92 ms by bot id=8238763231
+2025-09-27 23:27:36,432 - aiogram.event - INFO - Update id=224569648 is handled. Duration 188 ms by bot id=8238763231
+2025-09-27 23:27:39,967 - aiogram.event - INFO - Update id=224569649 is handled. Duration 140 ms by bot id=8238763231
+2025-09-27 23:27:51,974 - aiogram.event - INFO - Update id=224569650 is handled. Duration 92 ms by bot id=8238763231
+2025-09-27 23:27:57,354 - aiogram.event - INFO - Update id=224569651 is handled. Duration 78 ms by bot id=8238763231
+2025-09-27 23:27:58,899 - aiogram.event - INFO - Update id=224569652 is handled. Duration 108 ms by bot id=8238763231
+2025-09-27 23:28:00,425 - aiogram.event - INFO - Update id=224569653 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 00:02:09,382 - aiogram.event - INFO - Update id=224569654 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 00:02:11,395 - aiogram.event - INFO - Update id=224569655 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 00:06:35,570 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 00:06:35,764 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 00:57:03,655 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-09-28 00:57:03,656 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8238763231)
+2025-09-28 00:57:25,697 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-09-28 00:57:25,697 - aiogram.dispatcher - WARNING - Sleep for 1.384642 seconds and try again... (tryings = 1, bot id = 8238763231)
+2025-09-28 00:57:48,128 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-09-28 00:57:48,128 - aiogram.dispatcher - WARNING - Sleep for 1.711627 seconds and try again... (tryings = 2, bot id = 8238763231)
+2025-09-28 00:58:10,884 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2025-09-28 00:58:10,884 - aiogram.dispatcher - WARNING - Sleep for 2.246237 seconds and try again... (tryings = 3, bot id = 8238763231)
+2025-09-28 00:58:30,334 - aiogram.dispatcher - INFO - Connection established (tryings = 4, bot id = 8238763231)
+2025-09-28 01:12:56,237 - aiogram.event - INFO - Update id=224569656 is handled. Duration 186 ms by bot id=8238763231
+2025-09-28 01:12:57,931 - aiogram.event - INFO - Update id=224569657 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 01:12:59,534 - aiogram.event - INFO - Update id=224569658 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 01:13:02,099 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 01:13:02,104 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 01:13:02,188 - aiogram.event - INFO - Update id=224569659 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 01:13:06,859 - aiogram.event - INFO - Update id=224569660 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 01:13:08,384 - aiogram.event - INFO - Update id=224569661 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 01:13:19,226 - aiogram.event - INFO - Update id=224569662 is handled. Duration 61 ms by bot id=8238763231
+2025-09-28 01:13:21,835 - aiogram.event - INFO - Update id=224569663 is handled. Duration 63 ms by bot id=8238763231
+2025-09-28 01:13:23,602 - aiogram.event - INFO - Update id=224569664 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 01:13:25,266 - aiogram.event - INFO - Update id=224569665 is handled. Duration 281 ms by bot id=8238763231
+2025-09-28 01:13:30,704 - aiogram.event - INFO - Update id=224569666 is handled. Duration 1266 ms by bot id=8238763231
+2025-09-28 01:13:32,276 - aiogram.event - INFO - Update id=224569667 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 01:13:33,371 - aiogram.event - INFO - Update id=224569668 is handled. Duration 297 ms by bot id=8238763231
+2025-09-28 01:13:42,394 - aiogram.event - INFO - Update id=224569669 is handled. Duration 3297 ms by bot id=8238763231
+2025-09-28 01:13:45,367 - aiogram.event - INFO - Update id=224569670 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 01:13:46,326 - aiogram.event - INFO - Update id=224569671 is handled. Duration 94 ms by bot id=8238763231
+2025-09-28 01:14:58,431 - aiogram.event - INFO - Update id=224569672 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 01:14:58,482 - aiogram.event - INFO - Update id=224569673 is handled. Duration 15 ms by bot id=8238763231
+2025-09-28 01:14:58,482 - aiogram.event - INFO - Update id=224569674 is handled. Duration 15 ms by bot id=8238763231
+2025-09-28 14:14:43,302 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 14:14:43,308 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 14:15:29,016 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 14:15:29,022 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 14:45:47,863 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 14:45:48,138 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 14:45:48,371 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 14:45:48,376 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 14:45:48,556 - aiogram.event - INFO - Update id=224569675 is handled. Duration 359 ms by bot id=8238763231
+2025-09-28 14:45:48,565 - aiogram.event - INFO - Update id=224569676 is handled. Duration 375 ms by bot id=8238763231
+2025-09-28 14:46:06,745 - aiogram.event - INFO - Update id=224569677 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 14:46:47,373 - aiogram.event - INFO - Update id=224569678 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:48:05,811 - aiogram.event - INFO - Update id=224569679 is handled. Duration 109 ms by bot id=8238763231
+2025-09-28 14:48:07,176 - aiogram.event - INFO - Update id=224569680 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 14:48:38,817 - aiogram.event - INFO - Update id=224569681 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:48:41,623 - aiogram.event - INFO - Update id=224569682 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 14:48:42,454 - aiogram.event - INFO - Update id=224569683 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:48:43,520 - aiogram.event - INFO - Update id=224569684 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 14:48:48,076 - aiogram.event - INFO - Update id=224569685 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:48:58,934 - aiogram.event - INFO - Update id=224569686 is handled. Duration 139 ms by bot id=8238763231
+2025-09-28 14:49:01,080 - aiogram.event - INFO - Update id=224569687 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 14:49:02,074 - aiogram.event - INFO - Update id=224569688 is handled. Duration 233 ms by bot id=8238763231
+2025-09-28 14:49:13,616 - aiogram.event - INFO - Update id=224569689 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 14:49:18,489 - aiogram.event - INFO - Update id=224569690 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:53:33,824 - aiogram.event - INFO - Update id=224569691 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:53:34,820 - aiogram.event - INFO - Update id=224569692 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:53:37,295 - aiogram.event - INFO - Update id=224569693 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:53:38,180 - aiogram.event - INFO - Update id=224569694 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:53:39,232 - aiogram.event - INFO - Update id=224569695 is handled. Duration 156 ms by bot id=8238763231
+2025-09-28 14:54:11,189 - root - INFO - Добавлен новый пользователь бота: 8116601232 (sl)
+2025-09-28 14:54:11,198 - root - INFO - Пользователь 8116601232 (sl) добавлен в базу бота
+2025-09-28 14:54:11,695 - aiogram.event - INFO - Update id=224569696 is handled. Duration 530 ms by bot id=8238763231
+2025-09-28 14:54:12,766 - aiogram.event - INFO - Update id=224569697 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:54:16,089 - aiogram.event - INFO - Update id=224569698 is handled. Duration 219 ms by bot id=8238763231
+2025-09-28 14:55:21,255 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-28 14:55:21,260 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 14:55:21,405 - aiogram.event - INFO - Update id=224569699 is handled. Duration 139 ms by bot id=8238763231
+2025-09-28 14:55:23,602 - aiogram.event - INFO - Update id=224569700 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:55:25,012 - aiogram.event - INFO - Update id=224569701 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 14:55:41,024 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-28 14:55:41,028 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 14:55:41,115 - aiogram.event - INFO - Update id=224569702 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:55:42,460 - aiogram.event - INFO - Update id=224569703 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:57:04,645 - aiogram.event - INFO - Update id=224569704 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:57:05,998 - aiogram.event - INFO - Update id=224569705 is handled. Duration 202 ms by bot id=8238763231
+2025-09-28 14:57:16,441 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 14:57:16,447 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 14:57:16,560 - aiogram.event - INFO - Update id=224569706 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 14:57:17,797 - aiogram.event - INFO - Update id=224569707 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 14:57:48,814 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 14:57:48,824 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 14:57:48,924 - aiogram.event - INFO - Update id=224569708 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 14:57:49,983 - aiogram.event - INFO - Update id=224569709 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:57:51,175 - aiogram.event - INFO - Update id=224569710 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 14:58:01,805 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 14:58:01,810 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 14:58:01,907 - aiogram.event - INFO - Update id=224569711 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:58:03,246 - aiogram.event - INFO - Update id=224569712 is handled. Duration 77 ms by bot id=8238763231
+2025-09-28 14:58:04,635 - aiogram.event - INFO - Update id=224569713 is handled. Duration 296 ms by bot id=8238763231
+2025-09-28 14:58:13,752 - aiogram.event - INFO - Update id=224569714 is handled. Duration 171 ms by bot id=8238763231
+2025-09-28 14:58:14,870 - aiogram.event - INFO - Update id=224569715 is handled. Duration 296 ms by bot id=8238763231
+2025-09-28 14:58:37,270 - aiogram.event - INFO - Update id=224569716 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 14:58:38,532 - aiogram.event - INFO - Update id=224569717 is handled. Duration 343 ms by bot id=8238763231
+2025-09-28 14:58:39,488 - aiogram.event - INFO - Update id=224569718 is handled. Duration 187 ms by bot id=8238763231
+2025-09-28 14:58:41,254 - aiogram.event - INFO - Update id=224569719 is handled. Duration 63 ms by bot id=8238763231
+2025-09-28 14:58:41,635 - root - INFO - Подписка успешно добавлена для пользователя 8116601232 на 0 мес. До 05.10.2025 14:58
+2025-09-28 14:58:41,734 - aiogram.event - INFO - Update id=224569720 is handled. Duration 375 ms by bot id=8238763231
+2025-09-28 14:58:54,989 - aiogram.event - INFO - Update id=224569721 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:58:55,612 - aiogram.event - INFO - Update id=224569722 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 14:58:56,920 - aiogram.event - INFO - Update id=224569723 is handled. Duration 219 ms by bot id=8238763231
+2025-09-28 14:59:03,121 - aiogram.event - INFO - Update id=224569724 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 14:59:04,163 - aiogram.event - INFO - Update id=224569725 is handled. Duration 297 ms by bot id=8238763231
+2025-09-28 14:59:16,486 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 14:59:16,491 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 14:59:16,585 - aiogram.event - INFO - Update id=224569726 is handled. Duration 110 ms by bot id=8238763231
+2025-09-28 14:59:17,855 - aiogram.event - INFO - Update id=224569727 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 14:59:19,671 - aiogram.event - INFO - Update id=224569728 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:02:02,270 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:02:02,504 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:02:09,134 - aiogram.event - INFO - Update id=224569729 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:02:10,032 - aiogram.event - INFO - Update id=224569730 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:02:11,310 - aiogram.event - INFO - Update id=224569731 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:02:12,625 - aiogram.event - INFO - Update id=224569732 is handled. Duration 155 ms by bot id=8238763231
+2025-09-28 15:02:48,482 - aiogram.event - INFO - Update id=224569733 is handled. Duration 139 ms by bot id=8238763231
+2025-09-28 15:02:49,646 - aiogram.event - INFO - Update id=224569734 is handled. Duration 233 ms by bot id=8238763231
+2025-09-28 15:03:00,629 - root - INFO - Добавлен новый пользователь бота: 8116601232 (sl)
+2025-09-28 15:03:00,638 - root - INFO - Пользователь 8116601232 (sl) добавлен в базу бота
+2025-09-28 15:03:00,732 - aiogram.event - INFO - Update id=224569735 is handled. Duration 109 ms by bot id=8238763231
+2025-09-28 15:03:02,073 - aiogram.event - INFO - Update id=224569736 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:03:03,437 - aiogram.event - INFO - Update id=224569737 is handled. Duration 328 ms by bot id=8238763231
+2025-09-28 15:03:04,906 - aiogram.event - INFO - Update id=224569738 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:03:06,235 - aiogram.event - INFO - Update id=224569739 is handled. Duration 436 ms by bot id=8238763231
+2025-09-28 15:03:07,224 - aiogram.event - INFO - Update id=224569740 is handled. Duration 186 ms by bot id=8238763231
+2025-09-28 15:03:08,713 - aiogram.event - INFO - Update id=224569741 is handled. Duration 63 ms by bot id=8238763231
+2025-09-28 15:03:09,152 - root - INFO - Подписка успешно добавлена для пользователя 8116601232 на 0 мес. До 05.10.2025 15:03
+2025-09-28 15:03:09,392 - aiogram.event - INFO - Update id=224569742 is handled. Duration 593 ms by bot id=8238763231
+2025-09-28 15:03:30,165 - aiogram.event - INFO - Update id=224569743 is handled. Duration 172 ms by bot id=8238763231
+2025-09-28 15:03:31,626 - aiogram.event - INFO - Update id=224569744 is handled. Duration 312 ms by bot id=8238763231
+2025-09-28 15:08:11,157 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:08:11,376 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:08:20,467 - aiogram.event - INFO - Update id=224569745 is handled. Duration 188 ms by bot id=8238763231
+2025-09-28 15:08:21,691 - aiogram.event - INFO - Update id=224569746 is handled. Duration 405 ms by bot id=8238763231
+2025-09-28 15:08:28,955 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-28 15:08:28,962 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:08:29,067 - aiogram.event - INFO - Update id=224569747 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 15:08:31,134 - aiogram.event - INFO - Update id=224569748 is handled. Duration 171 ms by bot id=8238763231
+2025-09-28 15:08:32,517 - aiogram.event - INFO - Update id=224569749 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:08:39,187 - aiogram.event - INFO - Update id=224569750 is handled. Duration 109 ms by bot id=8238763231
+2025-09-28 15:08:40,361 - aiogram.event - INFO - Update id=224569751 is handled. Duration 233 ms by bot id=8238763231
+2025-09-28 15:08:45,169 - aiogram.event - INFO - Update id=224569752 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 15:08:46,406 - aiogram.event - INFO - Update id=224569753 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 15:08:47,341 - aiogram.event - INFO - Update id=224569754 is handled. Duration 141 ms by bot id=8238763231
+2025-09-28 15:08:48,820 - aiogram.event - INFO - Update id=224569755 is handled. Duration 358 ms by bot id=8238763231
+2025-09-28 15:09:19,243 - aiogram.event - INFO - Update id=224569756 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:09:20,333 - aiogram.event - INFO - Update id=224569757 is handled. Duration 110 ms by bot id=8238763231
+2025-09-28 15:10:23,418 - aiogram.event - INFO - Update id=224569758 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 15:10:26,662 - aiogram.event - INFO - Update id=224569759 is handled. Duration 0 ms by bot id=8238763231
+2025-09-28 15:10:35,775 - aiogram.event - INFO - Update id=224569760 is handled. Duration 156 ms by bot id=8238763231
+2025-09-28 15:10:37,058 - aiogram.event - INFO - Update id=224569761 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 15:10:47,817 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:10:47,825 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:10:47,950 - aiogram.event - INFO - Update id=224569762 is handled. Duration 140 ms by bot id=8238763231
+2025-09-28 15:10:54,221 - aiogram.event - INFO - Update id=224569763 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:11:03,086 - aiogram.event - INFO - Update id=224569764 is handled. Duration 296 ms by bot id=8238763231
+2025-09-28 15:11:04,160 - aiogram.event - INFO - Update id=224569765 is handled. Duration 391 ms by bot id=8238763231
+2025-09-28 15:11:16,004 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:11:16,158 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:11:19,436 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002D7A951E9E0>
+2025-09-28 15:11:19,437 - asyncio - ERROR - Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000002D7A951F760>
+transport: <_ProactorSocketTransport fd=772 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 361, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 397, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+2025-09-28 15:11:19,462 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-5' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-28 15:11:19,462 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<Dispatcher._polling() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:373> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-28 15:11:19,462 - aiogram.dispatcher - INFO - Polling stopped for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:11:19,462 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 15:11:19,463 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<main.<locals>.notify_expiring_loop() running at C:\shard vpn\bot.py:876> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:11:19,463 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<main.<locals>.notify_all_expiring_loop() running at C:\shard vpn\bot.py:929> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:11:19,463 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future finished result=True> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:11:19,463 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:11:23,389 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:11:23,545 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:11:26,626 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-28 15:11:26,631 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:11:26,832 - aiogram.event - INFO - Update id=224569766 is handled. Duration 219 ms by bot id=8238763231
+2025-09-28 15:11:27,895 - aiogram.event - INFO - Update id=224569767 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:11:34,797 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:11:34,797 - root - INFO -   Реферер: None
+2025-09-28 15:11:34,797 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:11:34,797 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:11:34,797 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:11:34,798 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:11:34,800 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:11'}
+2025-09-28 15:11:35,078 - aiogram.event - INFO - Update id=224569768 is handled. Duration 280 ms by bot id=8238763231
+2025-09-28 15:11:42,560 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:11:42,564 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:11:42,698 - aiogram.event - INFO - Update id=224569769 is handled. Duration 140 ms by bot id=8238763231
+2025-09-28 15:11:45,801 - aiogram.event - INFO - Update id=224569770 is handled. Duration 109 ms by bot id=8238763231
+2025-09-28 15:12:01,256 - aiogram.event - INFO - Update id=224569771 is handled. Duration 141 ms by bot id=8238763231
+2025-09-28 15:12:02,583 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:12:02,583 - root - INFO -   Реферер: None
+2025-09-28 15:12:02,583 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:12:02,583 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:12:02,583 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:12:02,584 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:12:02,586 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:08'}
+2025-09-28 15:12:02,800 - aiogram.event - INFO - Update id=224569772 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:12:12,115 - aiogram.event - INFO - Update id=224569773 is handled. Duration 155 ms by bot id=8238763231
+2025-09-28 15:12:13,064 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:12:13,064 - root - INFO -   Реферер: None
+2025-09-28 15:12:13,064 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:12:13,064 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:12:13,064 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:12:13,065 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:12:13,067 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:11'}
+2025-09-28 15:12:13,357 - aiogram.event - INFO - Update id=224569774 is handled. Duration 296 ms by bot id=8238763231
+2025-09-28 15:13:06,967 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:13:07,138 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:13:13,122 - aiogram.event - INFO - Update id=224569775 is handled. Duration 187 ms by bot id=8238763231
+2025-09-28 15:13:14,243 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:13:14,243 - root - INFO -   Реферер: None
+2025-09-28 15:13:14,243 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:13:14,243 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:13:14,243 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:13:14,244 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:13:14,246 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:11'}
+2025-09-28 15:13:14,455 - aiogram.event - INFO - Update id=224569776 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:13:23,754 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:13:23,759 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:13:23,759 - __main__ - INFO - Пользователь 8272216832 отправил: '/start 8132904958'
+2025-09-28 15:13:23,759 - __main__ - INFO - Извлечен payload: '8132904958'
+2025-09-28 15:13:23,760 - __main__ - INFO - Обработка реферальной ссылки: 8272216832 -> 8132904958
+2025-09-28 15:13:23,762 - __main__ - INFO - Пользователь 8272216832 уже был в боте, привязка невозможна
+2025-09-28 15:13:23,912 - aiogram.event - INFO - Update id=224569777 is handled. Duration 172 ms by bot id=8238763231
+2025-09-28 15:13:36,510 - aiogram.event - INFO - Update id=224569778 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 15:13:38,336 - aiogram.event - INFO - Update id=224569779 is handled. Duration 110 ms by bot id=8238763231
+2025-09-28 15:13:40,358 - aiogram.event - INFO - Update id=224569780 is handled. Duration 139 ms by bot id=8238763231
+2025-09-28 15:13:41,516 - aiogram.event - INFO - Update id=224569781 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:13:42,909 - aiogram.event - INFO - Update id=224569782 is handled. Duration 281 ms by bot id=8238763231
+2025-09-28 15:13:51,500 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-28 15:13:51,505 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:13:51,505 - __main__ - INFO - Пользователь 8132904958 отправил: '/start 8132904958'
+2025-09-28 15:13:51,506 - __main__ - INFO - Извлечен payload: '8132904958'
+2025-09-28 15:13:51,506 - __main__ - INFO - Обработка реферальной ссылки: 8132904958 -> 8132904958
+2025-09-28 15:13:51,506 - __main__ - INFO - Некорректный referrer_id: 8132904958
+2025-09-28 15:13:51,590 - aiogram.event - INFO - Update id=224569783 is handled. Duration 94 ms by bot id=8238763231
+2025-09-28 15:13:59,407 - aiogram.event - INFO - Update id=224569784 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:14:00,627 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:14:00,627 - root - INFO -   Реферер: None
+2025-09-28 15:14:00,627 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:14:00,627 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:14:00,627 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:14:00,628 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:14:00,629 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:13'}
+2025-09-28 15:14:00,833 - aiogram.event - INFO - Update id=224569785 is handled. Duration 219 ms by bot id=8238763231
+2025-09-28 15:14:12,860 - root - INFO - Добавлен новый пользователь бота: 8272216832 (Андрейка)
+2025-09-28 15:14:12,867 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:14:12,867 - __main__ - INFO - Пользователь 8272216832 отправил: '/start 8132904958'
+2025-09-28 15:14:12,867 - __main__ - INFO - Извлечен payload: '8132904958'
+2025-09-28 15:14:12,867 - __main__ - INFO - Обработка реферальной ссылки: 8272216832 -> 8132904958
+2025-09-28 15:14:12,870 - __main__ - INFO - Пользователь 8272216832 уже был в боте, привязка невозможна
+2025-09-28 15:14:13,012 - aiogram.event - INFO - Update id=224569786 is handled. Duration 156 ms by bot id=8238763231
+2025-09-28 15:14:17,371 - aiogram.event - INFO - Update id=224569787 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:14:18,509 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:14:18,510 - root - INFO -   Реферер: None
+2025-09-28 15:14:18,510 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:14:18,510 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:14:18,510 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:14:18,511 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:14:18,513 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:14'}
+2025-09-28 15:14:18,980 - aiogram.event - INFO - Update id=224569788 is handled. Duration 484 ms by bot id=8238763231
+2025-09-28 15:14:23,995 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:14:23,997 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:14:23,998 - __main__ - INFO - Пользователь 8272216832 отправил: '/start 8132904958'
+2025-09-28 15:14:23,999 - __main__ - INFO - Извлечен payload: '8132904958'
+2025-09-28 15:14:23,999 - __main__ - INFO - Обработка реферальной ссылки: 8272216832 -> 8132904958
+2025-09-28 15:14:24,004 - __main__ - INFO - Пользователь 8272216832 уже был в боте, привязка невозможна
+2025-09-28 15:14:24,087 - aiogram.event - INFO - Update id=224569789 is handled. Duration 94 ms by bot id=8238763231
+2025-09-28 15:15:32,590 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:15:32,785 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:15:36,228 - aiogram.event - INFO - Update id=224569790 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:15:37,291 - aiogram.event - INFO - Update id=224569791 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:15:38,321 - aiogram.event - INFO - Update id=224569792 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:15:39,557 - aiogram.event - INFO - Update id=224569793 is handled. Duration 264 ms by bot id=8238763231
+2025-09-28 15:15:48,334 - __main__ - INFO - Пользователь 8132904958 отправил: '/start'
+2025-09-28 15:15:48,342 - root - INFO - Добавлен новый пользователь бота: 8132904958 (godbless)
+2025-09-28 15:15:48,347 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:15:48,453 - aiogram.event - INFO - Update id=224569794 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:15:53,487 - aiogram.event - INFO - Update id=224569795 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:15:54,391 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:15:54,391 - root - INFO -   Реферер: None
+2025-09-28 15:15:54,392 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:15:54,392 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:15:54,392 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:15:54,393 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:15:54,394 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:15'}
+2025-09-28 15:15:54,609 - aiogram.event - INFO - Update id=224569796 is handled. Duration 234 ms by bot id=8238763231
+2025-09-28 15:16:08,287 - __main__ - INFO - Пользователь 8272216832 отправил: '/start 8132904958'
+2025-09-28 15:16:08,288 - __main__ - INFO - Извлечен payload: '8132904958'
+2025-09-28 15:16:08,288 - __main__ - INFO - Обработка реферальной ссылки: 8272216832 -> 8132904958
+2025-09-28 15:16:08,293 - __main__ - INFO - Попытка привязать 8272216832 к рефереру 8132904958
+2025-09-28 15:16:08,305 - root - INFO - Добавлен новый пользователь бота: 8272216832 (None)
+2025-09-28 15:16:08,322 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 15:16:08,328 - root - INFO - Привязан реферал 8272216832 к рефереру 8132904958
+2025-09-28 15:16:08,332 - __main__ - INFO - Результат привязки: True
+2025-09-28 15:16:08,335 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:16:08,339 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:16:08,526 - aiogram.event - INFO - Update id=224569797 is handled. Duration 233 ms by bot id=8238763231
+2025-09-28 15:16:26,014 - aiogram.event - INFO - Update id=224569798 is handled. Duration 328 ms by bot id=8238763231
+2025-09-28 15:16:26,725 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:16:26,726 - root - INFO -   Реферер: None
+2025-09-28 15:16:26,726 - root - INFO -   1-я линия: [8272216832] (всего: 1)
+2025-09-28 15:16:26,726 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:16:26,726 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:16:26,727 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.0, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:16:26,728 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [8272216832], 'referrals_table': [{'referrer_id': 8132904958, 'referred_id': 8272216832, 'date': '28.09.2025 15:16'}], 'first_interaction': '28.09.2025 15:15'}
+2025-09-28 15:16:27,264 - aiogram.event - INFO - Update id=224569799 is handled. Duration 546 ms by bot id=8238763231
+2025-09-28 15:16:34,795 - aiogram.event - INFO - Update id=224569800 is handled. Duration 172 ms by bot id=8238763231
+2025-09-28 15:16:45,361 - aiogram.event - INFO - Update id=224569801 is handled. Duration 140 ms by bot id=8238763231
+2025-09-28 15:16:46,674 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:16:46,674 - root - INFO -   Реферер: 8132904958
+2025-09-28 15:16:46,674 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:16:46,674 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:16:46,674 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:16:46,675 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:16:46,676 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8132904958, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:16'}
+2025-09-28 15:16:46,932 - aiogram.event - INFO - Update id=224569802 is handled. Duration 264 ms by bot id=8238763231
+2025-09-28 15:16:48,798 - aiogram.event - INFO - Update id=224569803 is handled. Duration 187 ms by bot id=8238763231
+2025-09-28 15:16:49,895 - aiogram.event - INFO - Update id=224569804 is handled. Duration 389 ms by bot id=8238763231
+2025-09-28 15:16:50,989 - aiogram.event - INFO - Update id=224569805 is handled. Duration 468 ms by bot id=8238763231
+2025-09-28 15:16:52,284 - aiogram.event - INFO - Update id=224569806 is handled. Duration 172 ms by bot id=8238763231
+2025-09-28 15:16:56,625 - aiogram.event - INFO - Update id=224569807 is handled. Duration 46 ms by bot id=8238763231
+2025-09-28 15:16:57,033 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 05.10.2025 15:16
+2025-09-28 15:16:57,256 - aiogram.event - INFO - Update id=224569808 is handled. Duration 546 ms by bot id=8238763231
+2025-09-28 15:17:00,374 - aiogram.event - INFO - Update id=224569809 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:17:12,080 - aiogram.event - INFO - Update id=224569810 is handled. Duration 125 ms by bot id=8238763231
+2025-09-28 15:17:13,499 - root - INFO - Отладка рефералов для 8132904958:
+2025-09-28 15:17:13,499 - root - INFO -   Реферер: None
+2025-09-28 15:17:13,499 - root - INFO -   1-я линия: [8272216832] (всего: 1)
+2025-09-28 15:17:13,499 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:17:13,499 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:17:13,500 - __main__ - INFO - Реферальная статистика для 8132904958: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:17:13,502 - __main__ - INFO - Отладочные данные для 8132904958: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [8272216832], 'referrals_table': [{'referrer_id': 8132904958, 'referred_id': 8272216832, 'date': '28.09.2025 15:16'}], 'first_interaction': '28.09.2025 15:15'}
+2025-09-28 15:17:13,710 - aiogram.event - INFO - Update id=224569811 is handled. Duration 219 ms by bot id=8238763231
+2025-09-28 15:19:33,489 - aiogram.event - INFO - Update id=224569812 is handled. Duration 140 ms by bot id=8238763231
+2025-09-28 15:19:34,669 - aiogram.event - INFO - Update id=224569813 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:19:38,332 - aiogram.event - INFO - Update id=224569814 is handled. Duration 94 ms by bot id=8238763231
+2025-09-28 15:19:43,853 - aiogram.event - INFO - Update id=224569815 is handled. Duration 186 ms by bot id=8238763231
+2025-09-28 15:19:45,530 - aiogram.event - INFO - Update id=224569816 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:19:56,069 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:19:56,231 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:20:37,648 - __main__ - INFO - Пользователь 8116601232 отправил: '/start 6115695618'
+2025-09-28 15:20:37,649 - __main__ - INFO - Извлечен payload: '6115695618'
+2025-09-28 15:20:37,649 - __main__ - INFO - Обработка реферальной ссылки: 8116601232 -> 6115695618
+2025-09-28 15:20:37,650 - __main__ - INFO - Попытка привязать 8116601232 к рефереру 6115695618
+2025-09-28 15:20:37,655 - root - INFO - Добавлен новый пользователь бота: 8116601232 (None)
+2025-09-28 15:20:37,663 - root - INFO - Добавлен новый пользователь бота: 6115695618 (None)
+2025-09-28 15:20:37,669 - root - INFO - Привязан реферал 8116601232 к рефереру 6115695618
+2025-09-28 15:20:37,674 - __main__ - INFO - Результат привязки: True
+2025-09-28 15:20:37,677 - root - INFO - Обновлен пользователь бота: 8116601232
+2025-09-28 15:20:37,681 - root - INFO - Пользователь 8116601232 (sl) добавлен в базу бота
+2025-09-28 15:20:37,900 - aiogram.event - INFO - Update id=224569817 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:20:39,113 - aiogram.event - INFO - Update id=224569818 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:20:41,629 - aiogram.event - INFO - Update id=224569819 is handled. Duration 360 ms by bot id=8238763231
+2025-09-28 15:20:43,275 - aiogram.event - INFO - Update id=224569820 is handled. Duration 171 ms by bot id=8238763231
+2025-09-28 15:20:44,750 - aiogram.event - INFO - Update id=224569821 is handled. Duration 62 ms by bot id=8238763231
+2025-09-28 15:20:45,132 - root - INFO - Подписка успешно добавлена для пользователя 8116601232 на 0 мес. До 05.10.2025 15:20
+2025-09-28 15:20:45,440 - aiogram.event - INFO - Update id=224569822 is handled. Duration 640 ms by bot id=8238763231
+2025-09-28 15:20:46,764 - aiogram.event - INFO - Update id=224569823 is handled. Duration 375 ms by bot id=8238763231
+2025-09-28 15:20:49,545 - root - INFO - Отладка рефералов для 8116601232:
+2025-09-28 15:20:49,545 - root - INFO -   Реферер: 6115695618
+2025-09-28 15:20:49,546 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:20:49,546 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:20:49,546 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:20:49,546 - __main__ - INFO - Реферальная статистика для 8116601232: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:20:49,548 - __main__ - INFO - Отладочные данные для 8116601232: {'user_exists': True, 'has_referrer': True, 'referrer_id': 6115695618, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:20'}
+2025-09-28 15:20:49,772 - aiogram.event - INFO - Update id=224569824 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:20:55,314 - aiogram.event - INFO - Update id=224569825 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:20:56,326 - root - INFO - Отладка рефералов для 6115695618:
+2025-09-28 15:20:56,326 - root - INFO -   Реферер: None
+2025-09-28 15:20:56,327 - root - INFO -   1-я линия: [8116601232] (всего: 1)
+2025-09-28 15:20:56,327 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:20:56,327 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:20:56,328 - __main__ - INFO - Реферальная статистика для 6115695618: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:20:56,330 - __main__ - INFO - Отладочные данные для 6115695618: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [8116601232], 'referrals_table': [{'referrer_id': 6115695618, 'referred_id': 8116601232, 'date': '28.09.2025 15:20'}], 'first_interaction': '28.09.2025 15:20'}
+2025-09-28 15:20:56,545 - aiogram.event - INFO - Update id=224569826 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:21:24,335 - __main__ - INFO - Пользователь 8272216832 отправил: '/start 8116601232'
+2025-09-28 15:21:24,335 - __main__ - INFO - Извлечен payload: '8116601232'
+2025-09-28 15:21:24,336 - __main__ - INFO - Обработка реферальной ссылки: 8272216832 -> 8116601232
+2025-09-28 15:21:24,341 - __main__ - INFO - Попытка привязать 8272216832 к рефереру 8116601232
+2025-09-28 15:21:24,356 - root - INFO - Добавлен новый пользователь бота: 8272216832 (None)
+2025-09-28 15:21:24,370 - root - INFO - Обновлен пользователь бота: 8116601232
+2025-09-28 15:21:24,376 - root - INFO - Привязан реферал 8272216832 к рефереру 8116601232
+2025-09-28 15:21:24,382 - __main__ - INFO - Результат привязки: True
+2025-09-28 15:21:24,384 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:21:24,389 - root - INFO - Пользователь 8272216832 (Андрейка) добавлен в базу бота
+2025-09-28 15:21:24,488 - aiogram.event - INFO - Update id=224569827 is handled. Duration 155 ms by bot id=8238763231
+2025-09-28 15:21:38,536 - aiogram.event - INFO - Update id=224569828 is handled. Duration 141 ms by bot id=8238763231
+2025-09-28 15:21:42,784 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:21:42,784 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:21:42,784 - root - INFO -   1-я линия: [] (всего: 0)
+2025-09-28 15:21:42,784 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:21:42,784 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:21:42,785 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 0, 'level1': 0, 'level2': 0, 'level3': 0}
+2025-09-28 15:21:42,787 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [], 'referrals_table': [], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:21:43,053 - aiogram.event - INFO - Update id=224569829 is handled. Duration 281 ms by bot id=8238763231
+2025-09-28 15:22:08,379 - __main__ - INFO - Пользователь 8132904958 отправил: '/start 8272216832'
+2025-09-28 15:22:08,379 - __main__ - INFO - Извлечен payload: '8272216832'
+2025-09-28 15:22:08,379 - __main__ - INFO - Обработка реферальной ссылки: 8132904958 -> 8272216832
+2025-09-28 15:22:08,381 - __main__ - INFO - Попытка привязать 8132904958 к рефереру 8272216832
+2025-09-28 15:22:08,387 - root - INFO - Добавлен новый пользователь бота: 8132904958 (None)
+2025-09-28 15:22:08,395 - root - INFO - Обновлен пользователь бота: 8272216832
+2025-09-28 15:22:08,401 - root - INFO - Привязан реферал 8132904958 к рефереру 8272216832
+2025-09-28 15:22:08,406 - __main__ - INFO - Результат привязки: True
+2025-09-28 15:22:08,409 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 15:22:08,414 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:22:08,493 - aiogram.event - INFO - Update id=224569830 is handled. Duration 108 ms by bot id=8238763231
+2025-09-28 15:22:19,624 - __main__ - INFO - Пользователь 8132904958 отправил: '/start 8272216832'
+2025-09-28 15:22:19,624 - __main__ - INFO - Извлечен payload: '8272216832'
+2025-09-28 15:22:19,624 - __main__ - INFO - Обработка реферальной ссылки: 8132904958 -> 8272216832
+2025-09-28 15:22:19,627 - __main__ - INFO - Пользователь 8132904958 уже был в боте, привязка невозможна
+2025-09-28 15:22:19,629 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 15:22:19,629 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:22:19,712 - aiogram.event - INFO - Update id=224569831 is handled. Duration 94 ms by bot id=8238763231
+2025-09-28 15:22:28,770 - aiogram.event - INFO - Update id=224569832 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:22:29,704 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:22:29,704 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:22:29,704 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:22:29,704 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:22:29,704 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:22:29,706 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:22:29,708 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:22:30,029 - aiogram.event - INFO - Update id=224569833 is handled. Duration 358 ms by bot id=8238763231
+2025-09-28 15:22:32,933 - aiogram.event - INFO - Update id=224569834 is handled. Duration 343 ms by bot id=8238763231
+2025-09-28 15:22:34,259 - aiogram.event - INFO - Update id=224569835 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 15:22:35,720 - aiogram.event - INFO - Update id=224569836 is handled. Duration 453 ms by bot id=8238763231
+2025-09-28 15:22:38,767 - aiogram.event - INFO - Update id=224569837 is handled. Duration 500 ms by bot id=8238763231
+2025-09-28 15:22:40,255 - aiogram.event - INFO - Update id=224569838 is handled. Duration 63 ms by bot id=8238763231
+2025-09-28 15:22:40,588 - root - INFO - Подписка успешно добавлена для пользователя 8272216832 на 0 мес. До 05.10.2025 15:22
+2025-09-28 15:22:40,880 - aiogram.event - INFO - Update id=224569839 is handled. Duration 563 ms by bot id=8238763231
+2025-09-28 15:25:41,355 - aiogram.event - INFO - Update id=224569840 is handled. Duration 171 ms by bot id=8238763231
+2025-09-28 15:25:42,279 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:25:42,279 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:25:42,279 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:25:42,279 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:25:42,279 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:25:42,281 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.0, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:25:42,282 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:25:42,589 - aiogram.event - INFO - Update id=224569841 is handled. Duration 313 ms by bot id=8238763231
+2025-09-28 15:30:46,169 - root - WARNING - Платеж 306b3bd9-000f-5001-8000-197982c71f48 не завершился в течение 10 минут
+2025-09-28 15:32:40,544 - root - WARNING - Платеж 306b3c4b-000f-5001-9000-1aa329bb6f14 не завершился в течение 10 минут
+2025-09-28 15:37:55,802 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-28 15:37:55,803 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8238763231)
+2025-09-28 15:38:08,640 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-5' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-28 15:38:08,640 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 15:38:08,641 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<main.<locals>.notify_expiring_loop() running at C:\shard vpn\bot.py:885> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:38:08,642 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<main.<locals>.notify_all_expiring_loop() running at C:\shard vpn\bot.py:938> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:38:08,642 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future finished result=True> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:38:08,642 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<Dispatcher._polling() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:373> wait_for=<_OverlappedFuture cancelled>>
+2025-09-28 15:38:08,642 - aiogram.dispatcher - INFO - Polling stopped for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:38:08,643 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:38:12,649 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:38:12,655 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 15:38:27,244 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:38:27,420 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:38:27,477 - __main__ - INFO - Пользователь 8132904958 отправил: '/start'
+2025-09-28 15:38:27,478 - __main__ - INFO - Пользователь 8132904958 отправил: '/start'
+2025-09-28 15:38:27,482 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 15:38:27,489 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:38:27,494 - root - INFO - Обновлен пользователь бота: 8132904958
+2025-09-28 15:38:27,494 - root - INFO - Пользователь 8132904958 (godbless) добавлен в базу бота
+2025-09-28 15:38:27,665 - aiogram.event - INFO - Update id=224569842 is handled. Duration 188 ms by bot id=8238763231
+2025-09-28 15:38:27,709 - aiogram.event - INFO - Update id=224569843 is handled. Duration 235 ms by bot id=8238763231
+2025-09-28 15:38:43,228 - aiogram.event - INFO - Update id=224569844 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:38:44,326 - aiogram.event - INFO - Update id=224569845 is handled. Duration 155 ms by bot id=8238763231
+2025-09-28 15:38:46,013 - aiogram.event - INFO - Update id=224569846 is handled. Duration 296 ms by bot id=8238763231
+2025-09-28 15:38:47,210 - aiogram.event - INFO - Update id=224569847 is handled. Duration 156 ms by bot id=8238763231
+2025-09-28 15:38:49,123 - aiogram.event - INFO - Update id=224569848 is handled. Duration 93 ms by bot id=8238763231
+2025-09-28 15:38:49,443 - root - INFO - Подписка успешно добавлена для пользователя 8132904958 на 0 мес. До 05.10.2025 15:38
+2025-09-28 15:38:49,795 - aiogram.event - INFO - Update id=224569849 is handled. Duration 594 ms by bot id=8238763231
+2025-09-28 15:38:55,590 - aiogram.event - INFO - Update id=224569850 is handled. Duration 78 ms by bot id=8238763231
+2025-09-28 15:38:56,676 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:38:56,676 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:38:56,676 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:38:56,676 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:38:56,676 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:38:56,677 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:38:56,679 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:38:56,859 - aiogram.event - INFO - Update id=224569851 is handled. Duration 186 ms by bot id=8238763231
+2025-09-28 15:39:16,706 - aiogram.event - INFO - Update id=224569852 is handled. Duration 110 ms by bot id=8238763231
+2025-09-28 15:39:17,505 - root - INFO - Отладка рефералов для 6115695618:
+2025-09-28 15:39:17,506 - root - INFO -   Реферер: None
+2025-09-28 15:39:17,506 - root - INFO -   1-я линия: [8116601232] (всего: 1)
+2025-09-28 15:39:17,506 - root - INFO -   2-я линия: [8272216832] (всего: 1)
+2025-09-28 15:39:17,506 - root - INFO -   3-я линия: [8132904958] (всего: 1)
+2025-09-28 15:39:17,508 - __main__ - INFO - Реферальная статистика для 6115695618: {'balance': 0.45, 'today_first_line': 3, 'level1': 1, 'level2': 1, 'level3': 1}
+2025-09-28 15:39:17,509 - __main__ - INFO - Отладочные данные для 6115695618: {'user_exists': True, 'has_referrer': False, 'referrer_id': None, 'direct_referrals': [8116601232], 'referrals_table': [{'referrer_id': 6115695618, 'referred_id': 8116601232, 'date': '28.09.2025 15:20'}], 'first_interaction': '28.09.2025 15:20'}
+2025-09-28 15:39:17,698 - aiogram.event - INFO - Update id=224569853 is handled. Duration 203 ms by bot id=8238763231
+2025-09-28 15:48:50,569 - root - WARNING - Платеж 306b4015-000f-5000-b000-1e442cc81968 не завершился в течение 10 минут
+2025-09-28 15:50:51,878 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:50:52,064 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:50:58,297 - aiogram.event - INFO - Update id=224569854 is handled. Duration 235 ms by bot id=8238763231
+2025-09-28 15:51:00,007 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:51:00,008 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:51:00,008 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:51:00,008 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:51:00,008 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:51:00,010 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:51:00,012 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:51:00,378 - aiogram.event - INFO - Update id=224569855 is handled. Duration 391 ms by bot id=8238763231
+2025-09-28 15:52:55,379 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:52:55,563 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:52:56,825 - aiogram.event - INFO - Update id=224569856 is handled. Duration 421 ms by bot id=8238763231
+2025-09-28 15:52:59,070 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:52:59,070 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:52:59,070 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:52:59,070 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:52:59,070 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:52:59,071 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:52:59,073 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:52:59,441 - aiogram.event - INFO - Update id=224569857 is handled. Duration 390 ms by bot id=8238763231
+2025-09-28 15:53:49,794 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:53:49,974 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:53:50,559 - aiogram.event - INFO - Update id=224569858 is handled. Duration 406 ms by bot id=8238763231
+2025-09-28 15:53:51,407 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:53:51,407 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:53:51,408 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:53:51,408 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:53:51,408 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:53:51,409 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:53:51,411 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:53:51,617 - aiogram.event - INFO - Update id=224569859 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 15:57:41,863 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:57:42,055 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:57:49,972 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001770481ADA0>
+2025-09-28 15:57:49,973 - asyncio - ERROR - Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x000001770481BB20>
+transport: <_ProactorSocketTransport fd=640 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 361, in write
+    self._loop_writing(data=bytes(data))
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\proactor_events.py", line 397, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+2025-09-28 15:57:49,974 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-5' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-28 15:57:49,975 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<Dispatcher._polling() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:373> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_wait.<locals>._on_completion() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:475]>
+2025-09-28 15:57:49,975 - aiogram.dispatcher - INFO - Polling stopped for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:57:49,975 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-28 15:57:49,976 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<main.<locals>.notify_expiring_loop() running at C:\shard vpn\bot.py:884> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:57:49,976 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<main.<locals>.notify_all_expiring_loop() running at C:\shard vpn\bot.py:937> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-09-28 15:57:49,977 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-7' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future finished result=True> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:57:49,977 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-8' coro=<Event.wait() running at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py:214> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[_release_waiter(<Future pendi...ask_wakeup()]>)() at C:\Users\admin\AppData\Local\Programs\Python\Python310\lib\asyncio\tasks.py:387]>
+2025-09-28 15:58:23,047 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:58:23,215 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:58:26,228 - aiogram.event - INFO - Update id=224569860 is handled. Duration 264 ms by bot id=8238763231
+2025-09-28 15:58:27,222 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:58:27,222 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:58:27,222 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:58:27,222 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:58:27,223 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:58:27,224 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:58:27,225 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:58:27,346 - __main__ - ERROR - Ошибка referrals_callback: Telegram server says - Bad Request: BUTTON_URL_INVALID
+2025-09-28 15:58:27,404 - aiogram.event - INFO - Update id=224569861 is handled. Duration 186 ms by bot id=8238763231
+2025-09-28 15:58:32,785 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:58:32,785 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:58:32,785 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:58:32,785 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:58:32,785 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:58:32,786 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:58:32,788 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:58:32,904 - __main__ - ERROR - Ошибка referrals_callback: Telegram server says - Bad Request: BUTTON_URL_INVALID
+2025-09-28 15:58:32,984 - aiogram.event - INFO - Update id=224569862 is handled. Duration 218 ms by bot id=8238763231
+2025-09-28 15:58:50,786 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:58:50,786 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:58:50,786 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:58:50,786 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:58:50,786 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:58:50,788 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:58:50,790 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:58:50,956 - __main__ - ERROR - Ошибка referrals_callback: Telegram server says - Bad Request: BUTTON_URL_INVALID
+2025-09-28 15:58:51,044 - aiogram.event - INFO - Update id=224569863 is handled. Duration 266 ms by bot id=8238763231
+2025-09-28 15:59:14,861 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 15:59:15,021 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 15:59:22,055 - aiogram.event - INFO - Update id=224569864 is handled. Duration 250 ms by bot id=8238763231
+2025-09-28 15:59:25,539 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 15:59:25,539 - root - INFO -   Реферер: 8116601232
+2025-09-28 15:59:25,539 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 15:59:25,539 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 15:59:25,539 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 15:59:25,540 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 15:59:25,542 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 15:59:25,766 - aiogram.event - INFO - Update id=224569865 is handled. Duration 235 ms by bot id=8238763231
+2025-09-28 16:02:31,049 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 16:02:31,230 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 16:02:32,955 - aiogram.event - INFO - Update id=224569866 is handled. Duration 281 ms by bot id=8238763231
+2025-09-28 16:02:33,882 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 16:02:33,882 - root - INFO -   Реферер: 8116601232
+2025-09-28 16:02:33,882 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 16:02:33,882 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 16:02:33,883 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 16:02:33,884 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 16:02:33,886 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 16:02:34,104 - aiogram.event - INFO - Update id=224569867 is handled. Duration 234 ms by bot id=8238763231
+2025-09-28 16:03:43,533 - aiogram.dispatcher - INFO - Start polling
+2025-09-28 16:03:43,720 - aiogram.dispatcher - INFO - Run polling for bot @SHARDPROB_bot id=8238763231 - 'Shard VPN'
+2025-09-28 16:03:44,788 - aiogram.event - INFO - Update id=224569868 is handled. Duration 266 ms by bot id=8238763231
+2025-09-28 16:03:45,866 - root - INFO - Отладка рефералов для 8272216832:
+2025-09-28 16:03:45,866 - root - INFO -   Реферер: 8116601232
+2025-09-28 16:03:45,866 - root - INFO -   1-я линия: [8132904958] (всего: 1)
+2025-09-28 16:03:45,866 - root - INFO -   2-я линия: [] (всего: 0)
+2025-09-28 16:03:45,866 - root - INFO -   3-я линия: [] (всего: 0)
+2025-09-28 16:03:45,867 - __main__ - INFO - Реферальная статистика для 8272216832: {'balance': 0.3, 'today_first_line': 1, 'level1': 1, 'level2': 0, 'level3': 0}
+2025-09-28 16:03:45,869 - __main__ - INFO - Отладочные данные для 8272216832: {'user_exists': True, 'has_referrer': True, 'referrer_id': 8116601232, 'direct_referrals': [8132904958], 'referrals_table': [{'referrer_id': 8272216832, 'referred_id': 8132904958, 'date': '28.09.2025 15:22'}], 'first_interaction': '28.09.2025 15:21'}
+2025-09-28 16:03:46,082 - aiogram.event - INFO - Update id=224569869 is handled. Duration 250 ms by bot id=8238763231

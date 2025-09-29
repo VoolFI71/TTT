@@ -35,7 +35,14 @@ __all__ = [
     'get_all_referral_stats',
     'get_all_users_expiring_in_days',
     'mark_user_notified',
-    'has_paid_subscription'
+    'has_paid_subscription',
+    'has_used_trial',
+    'grant_trial_14d',
+    'attach_referrer_chain',
+    'get_uplines',
+    'accrue_referral_commissions',
+    'get_referral_overview',
+    'calculate_amount_for_period'
 ]
 
 async def init_db():
@@ -125,6 +132,28 @@ async def init_db():
         except Exception:
             pass
         
+        # Добавляем колонку для отметки использования триала (если её нет)
+        try:
+            await db.execute("""ALTER TABLE bot_users ADD COLUMN trial_used INTEGER DEFAULT 0""")
+        except Exception:
+            pass
+
+        # Баланс реферальный
+        try:
+            await db.execute("""ALTER TABLE bot_users ADD COLUMN referral_balance REAL DEFAULT 0""")
+        except Exception:
+            pass
+
+        # Таблица фиксации реферальных начислений
+        await db.execute('''CREATE TABLE IF NOT EXISTS referral_rewards
+                         (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                          payer_id INTEGER,
+                          beneficiary_id INTEGER,
+                          level INTEGER,
+                          amount REAL,
+                          created_at TEXT,
+                          method TEXT)''')
+
         await db.commit()
 
 async def add_bot_user(user_id: int, username: str = None, first_name: str = None, last_name: str = None):
@@ -1204,3 +1233,386 @@ async def has_paid_subscription(user_id: int) -> bool:
     except Exception as e:
         logging.error(f"Ошибка has_paid_subscription: {e}")
         return False
+
+async def has_used_trial(user_id: int) -> bool:
+    """Проверяет, использовал ли пользователь пробный период"""
+    try:
+        async with aiosqlite.connect(DB_PATH) as conn:
+            cursor = await conn.execute(
+                "SELECT trial_used FROM bot_users WHERE user_id = ?",
+                (user_id,)
+            )
+            row = await cursor.fetchone()
+            return bool(row and row[0])
+    except Exception as e:
+        logging.error(f"Ошибка has_used_trial: {e}")
+        return False
+
+async def grant_trial_14d(user_id: int) -> bool:
+    """Выдаёт пробный доступ на 14 дней единожды"""
+    try:
+        # если нет записи в bot_users — создаём
+        await add_bot_user(user_id)
+
+        # проверяем, не использовал ли триал ранее
+        if await has_used_trial(user_id):
+            return False
+
+        # выдаём подписку на 14 дней через унифицированный путь
+        success = await give_user_subscription(user_id, 14)
+        if not success:
+            return False
+
+        # отмечаем триал как использованный
+        async with aiosqlite.connect(DB_PATH) as conn:
+            await conn.execute(
+                "UPDATE bot_users SET trial_used = 1 WHERE user_id = ?",
+                (user_id,)
+            )
+            # логируем псевдо-платёж типа trial для аналитики
+            now = datetime.now().strftime('%d.%m.%Y %H:%M')
+            await conn.execute(
+                "INSERT INTO payments (user_id, amount, period, payment_date, payment_method) VALUES (?, ?, ?, ?, ?)",
+                (user_id, 0, 0, now, 'trial')
+            )
+            await conn.commit()
+        return True
+    except Exception as e:
+        logging.error(f"Ошибка grant_trial_14d: {e}", exc_info=True)
+        return False
+
+def calculate_amount_for_period(period_months: int) -> int:
+    """Возвращает сумму в рублях для периода (0 => спец 7 дней = 1₽)."""
+    if period_months == 0:
+        return 1
+    try:
+        return PRICES.get(str(period_months), PRICES.get('1')) // 100
+    except Exception:
+        return 0
+
+async def attach_referrer_chain(new_user_id: int, referrer_1_id: int) -> bool:
+    """Привязывает пользователя к рефереру 1-й линии (если ещё не привязан)."""
+    if new_user_id == referrer_1_id:
+        return False
+    try:
+        async with aiosqlite.connect(DB_PATH) as conn:
+            # Проверяем, нет ли уже привязки
+            cursor = await conn.execute(
+                "SELECT referrer_id FROM bot_users WHERE user_id = ?",
+                (new_user_id,)
+            )
+            row = await cursor.fetchone()
+            if row and row[0]:
+                return False
+
+            # Проверяем, что пользователь НЕ был в bot_users ранее (первый заход)
+            cursor = await conn.execute(
+                "SELECT first_interaction FROM bot_users WHERE user_id = ?",
+                (new_user_id,)
+            )
+            existing_user = await cursor.fetchone()
+            if existing_user:
+                # Пользователь уже был в системе - не считаем рефералом
+                return False
+
+            # Убеждаемся, что оба есть в bot_users
+            await add_bot_user(new_user_id)
+            await add_bot_user(referrer_1_id)
+
+            # Сохраняем прямого реферера
+            await conn.execute(
+                "UPDATE bot_users SET referrer_id = ? WHERE user_id = ?",
+                (referrer_1_id, new_user_id)
+            )
+            
+            logging.info(f"Привязан реферал {new_user_id} к рефереру {referrer_1_id}")
+
+            # Фиксируем связь в таблице referrals (только 1-я линия)
+            current_time = datetime.now().strftime('%d.%m.%Y %H:%M')
+            await conn.execute(
+                "INSERT INTO referrals (referrer_id, referred_id, referral_date) VALUES (?, ?, ?)",
+                (referrer_1_id, new_user_id, current_time)
+            )
+
+            # Инкремент счётчика 1-й линии у реферера
+            await conn.execute(
+                "UPDATE bot_users SET total_referrals = COALESCE(total_referrals, 0) + 1 WHERE user_id = ?",
+                (referrer_1_id,)
+            )
+
+            await conn.commit()
+            return True
+    except Exception as e:
+        logging.error(f"Ошибка attach_referrer_chain: {e}")
+        return False
+
+async def get_uplines(user_id: int):
+    """Возвращает кортеж (lvl1, lvl2, lvl3) для данного пользователя."""
+    try:
+        async with aiosqlite.connect(DB_PATH) as conn:
+            # lvl1
+            cursor = await conn.execute(
+                "SELECT referrer_id FROM bot_users WHERE user_id = ?",
+                (user_id,)
+            )
+            row = await cursor.fetchone()
+            lvl1 = row[0] if row and row[0] else None
+            lvl2 = None
+            lvl3 = None
+            if lvl1:
+                cursor = await conn.execute(
+                    "SELECT referrer_id FROM bot_users WHERE user_id = ?",
+                    (lvl1,)
+                )
+                row = await cursor.fetchone()
+                lvl2 = row[0] if row and row[0] else None
+                if lvl2:
+                    cursor = await conn.execute(
+                        "SELECT referrer_id FROM bot_users WHERE user_id = ?",
+                        (lvl2,)
+                    )
+                    row = await cursor.fetchone()
+                    lvl3 = row[0] if row and row[0] else None
+            return (lvl1, lvl2, lvl3)
+    except Exception as e:
+        logging.error(f"Ошибка get_uplines: {e}")
+        return (None, None, None)
+
+async def accrue_referral_commissions(payer_id: int, amount_rub: float, method: str = 'unknown', bot=None) -> None:
+    """Начисляет вознаграждения трём уровням (35%/10%/5%) и пишет лог."""
+    try:
+        if amount_rub is None or amount_rub <= 0:
+            return
+        lvl1, lvl2, lvl3 = await get_uplines(payer_id)
+        shares = [0.35, 0.10, 0.05]
+        beneficiaries = [lvl1, lvl2, lvl3]
+        now = datetime.now().strftime('%d.%m.%Y %H:%M')
+        async with aiosqlite.connect(DB_PATH) as conn:
+            for level, (beneficiary, share) in enumerate(zip(beneficiaries, shares), start=1):
+                if not beneficiary:
+                    continue
+                if beneficiary == payer_id:
+                    continue
+                reward = round(amount_rub * share, 2)
+                if reward <= 0:
+                    continue
+                await conn.execute(
+                    "UPDATE bot_users SET referral_balance = COALESCE(referral_balance, 0) + ? WHERE user_id = ?",
+                    (reward, beneficiary)
+                )
+                await conn.execute(
+                    "INSERT INTO referral_rewards (payer_id, beneficiary_id, level, amount, created_at, method) VALUES (?, ?, ?, ?, ?, ?)",
+                    (payer_id, beneficiary, level, reward, now, method)
+                )
+                
+                # Отправляем уведомление рефереру
+                if bot:
+                    try:
+                        # Получаем новый баланс
+                        cursor = await conn.execute(
+                            "SELECT referral_balance FROM bot_users WHERE user_id = ?",
+                            (beneficiary,)
+                        )
+                        new_balance = (await cursor.fetchone())[0]
+                        
+                        # Определяем период подписки
+                        period_text = "7 дней" if amount_rub == 1 else f"{int(amount_rub/99)} мес." if amount_rub >= 99 else f"{int(amount_rub/279)} мес." if amount_rub >= 279 else f"{int(amount_rub/549)} мес." if amount_rub >= 549 else f"{int(amount_rub/999)} мес."
+                        
+                        # Определяем процент
+                        percentage = int(share * 100)
+                        
+                        notification_text = f"""🎁 <b>Ваше реферальное вознаграждение!</b>
+
+Вы получили <b>{reward:.2f} ₽ ({percentage}%)</b> за покупку <b>{period_text} подписки</b> приглашённым пользователем по {level}-й линии.
+
+💰 <b>Текущий реферальный баланс: {new_balance:.2f}₽</b>"""
+                        
+                        await bot.send_message(
+                            chat_id=beneficiary,
+                            text=notification_text
+                        )
+                    except Exception as e:
+                        logging.error(f"Ошибка отправки уведомления рефереру {beneficiary}: {e}")
+            
+            await conn.commit()
+    except Exception as e:
+        logging.error(f"Ошибка accrue_referral_commissions: {e}", exc_info=True)
+
+async def debug_referral_chain(user_id: int) -> dict:
+    """Отладочная функция для проверки реферальной цепочки"""
+    result = {
+        'user_id': user_id,
+        'referrer_id': None,
+        'level1_refs': [],
+        'level2_refs': [],
+        'level3_refs': []
+    }
+    try:
+        async with aiosqlite.connect(DB_PATH) as conn:
+            # Получаем реферера пользователя
+            cursor = await conn.execute(
+                "SELECT referrer_id FROM bot_users WHERE user_id = ?",
+                (user_id,)
+            )
+            row = await cursor.fetchone()
+            if row and row[0]:
+                result['referrer_id'] = row[0]
+            
+            # 1-я линия - прямые рефералы
+            cursor = await conn.execute(
+                "SELECT user_id FROM bot_users WHERE referrer_id = ?",
+                (user_id,)
+            )
+            level1 = await cursor.fetchall()
+            result['level1_refs'] = [row[0] for row in level1]
+            
+            # 2-я линия - рефералы рефералов
+            if result['level1_refs']:
+                cursor = await conn.execute(
+                    "SELECT user_id FROM bot_users WHERE referrer_id IN ({})".format(
+                        ','.join('?' * len(result['level1_refs']))
+                    ),
+                    result['level1_refs']
+                )
+                level2 = await cursor.fetchall()
+                result['level2_refs'] = [row[0] for row in level2]
+            
+            # 3-я линия - рефералы рефералов рефералов
+            if result['level2_refs']:
+                cursor = await conn.execute(
+                    "SELECT user_id FROM bot_users WHERE referrer_id IN ({})".format(
+                        ','.join('?' * len(result['level2_refs']))
+                    ),
+                    result['level2_refs']
+                )
+                level3 = await cursor.fetchall()
+                result['level3_refs'] = [row[0] for row in level3]
+                
+    except Exception as e:
+        logging.error(f"Ошибка debug_referral_chain: {e}")
+    
+    return result
+
+async def get_referral_overview(user_id: int) -> dict:
+    """Возвращает сводку для партнёрской программы: баланс, сегодня, counts по 1/2/3 линиям."""
+    result = {
+        'balance': 0.0,
+        'today_first_line': 0,
+        'level1': 0,
+        'level2': 0,
+        'level3': 0,
+    }
+    try:
+        # Получаем отладочную информацию
+        debug_info = await debug_referral_chain(user_id)
+        
+        # Баланс
+        async with aiosqlite.connect(DB_PATH) as conn:
+            cursor = await conn.execute(
+                "SELECT COALESCE(referral_balance, 0) FROM bot_users WHERE user_id = ?",
+                (user_id,)
+            )
+            row = await cursor.fetchone()
+            result['balance'] = round(float(row[0]) if row else 0.0, 2)
+        
+        # Подсчитываем рефералов по линиям
+        result['level1'] = len(debug_info['level1_refs'])
+        result['level2'] = len(debug_info['level2_refs'])
+        result['level3'] = len(debug_info['level3_refs'])
+        
+        # Отладочная информация
+        logging.info(f"Отладка рефералов для {user_id}:")
+        logging.info(f"  Реферер: {debug_info['referrer_id']}")
+        logging.info(f"  1-я линия: {debug_info['level1_refs']} (всего: {result['level1']})")
+        logging.info(f"  2-я линия: {debug_info['level2_refs']} (всего: {result['level2']})")
+        logging.info(f"  3-я линия: {debug_info['level3_refs']} (всего: {result['level3']})")
+        
+        # Рефералы за сегодня
+        today = datetime.now().strftime('%d.%m.%Y')
+        today_count = 0
+        
+        async with aiosqlite.connect(DB_PATH) as conn:
+            # 1-я линия за сегодня
+            if debug_info['level1_refs']:
+                cursor = await conn.execute(
+                    "SELECT COUNT(*) FROM bot_users WHERE user_id IN ({}) AND first_interaction LIKE ?".format(
+                        ','.join('?' * len(debug_info['level1_refs']))
+                    ),
+                    debug_info['level1_refs'] + [f"{today}%"]
+                )
+                today_count += (await cursor.fetchone())[0]
+            
+            # 2-я линия за сегодня
+            if debug_info['level2_refs']:
+                cursor = await conn.execute(
+                    "SELECT COUNT(*) FROM bot_users WHERE user_id IN ({}) AND first_interaction LIKE ?".format(
+                        ','.join('?' * len(debug_info['level2_refs']))
+                    ),
+                    debug_info['level2_refs'] + [f"{today}%"]
+                )
+                today_count += (await cursor.fetchone())[0]
+            
+            # 3-я линия за сегодня
+            if debug_info['level3_refs']:
+                cursor = await conn.execute(
+                    "SELECT COUNT(*) FROM bot_users WHERE user_id IN ({}) AND first_interaction LIKE ?".format(
+                        ','.join('?' * len(debug_info['level3_refs']))
+                    ),
+                    debug_info['level3_refs'] + [f"{today}%"]
+                )
+                today_count += (await cursor.fetchone())[0]
+        
+        result['today_first_line'] = today_count
+        
+        return result
+    except Exception as e:
+        logging.error(f"Ошибка get_referral_overview: {e}")
+        return result
+
+async def check_referral_data(user_id: int) -> dict:
+    """Проверяет данные рефералов в базе для отладки"""
+    result = {
+        'user_exists': False,
+        'has_referrer': False,
+        'referrer_id': None,
+        'direct_referrals': [],
+        'referrals_table': []
+    }
+    
+    try:
+        async with aiosqlite.connect(DB_PATH) as conn:
+            # Проверяем, есть ли пользователь в bot_users
+            cursor = await conn.execute(
+                "SELECT user_id, referrer_id, first_interaction FROM bot_users WHERE user_id = ?",
+                (user_id,)
+            )
+            user_data = await cursor.fetchone()
+            if user_data:
+                result['user_exists'] = True
+                result['referrer_id'] = user_data[1]
+                result['has_referrer'] = bool(user_data[1])
+                result['first_interaction'] = user_data[2]
+            
+            # Проверяем прямых рефералов
+            cursor = await conn.execute(
+                "SELECT user_id FROM bot_users WHERE referrer_id = ?",
+                (user_id,)
+            )
+            direct_refs = await cursor.fetchall()
+            result['direct_referrals'] = [row[0] for row in direct_refs]
+            
+            # Проверяем таблицу referrals
+            cursor = await conn.execute(
+                "SELECT referrer_id, referred_id, referral_date FROM referrals WHERE referrer_id = ?",
+                (user_id,)
+            )
+            referrals_data = await cursor.fetchall()
+            result['referrals_table'] = [
+                {'referrer_id': row[0], 'referred_id': row[1], 'date': row[2]} 
+                for row in referrals_data
+            ]
+            
+    except Exception as e:
+        logging.error(f"Ошибка check_referral_data: {e}")
+    
+    return result
